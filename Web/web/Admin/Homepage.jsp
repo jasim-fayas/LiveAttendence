@@ -13,5 +13,8 @@
     </head>
     <body>
         <h1>Hello admin</h1>
+        <a href="ChangePassword.jsp">Change Password</a>
+          <a href="ViewProfile.jsp">View profile</a>
+           <a href="EditProfile.jsp"> Edit Profile</a>
     </body>
 </html>

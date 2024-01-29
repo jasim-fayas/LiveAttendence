@@ -1,3 +1,8 @@
+<%-- 
+    Document   : ChangePassword
+    Created on : 29 Jan, 2024, 9:08:52 PM
+    Author     : jasim fayas
+--%>
 <jsp:useBean class="DB.ConnectionClass" id="con"></jsp:useBean>
 <%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -5,32 +10,33 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Change Password</title>
+        <title>JSP Page</title>
     </head>
     <body>
         <h1>Change Password</h1>
-        <%
-            String fid = session.getAttribute("studentid").toString();
-            String department = " select * from tbl_student where student_id='" + fid + "'";
-            ResultSet rs = con.selectCommand(department);
+           <%
+            String fid = session.getAttribute("adminid").toString();
+            String admin = " select * from tbl_admin where admin_id='" + fid + "'";
+            ResultSet rs = con.selectCommand(admin);
             if (rs.next()) {
-                String dbpass = rs.getString("student_password");
+                String dbpass = rs.getString("admin_password");
 
                 String oldpass = request.getParameter("txt_oldpassword");
                 String newpass = request.getParameter("txt_newpassword");
                 String confirmpass = request.getParameter("txt_confirmpassword");
-
+                
 //                 out.println("dbpass: " + dbpass);
 //    out.println("oldpass: " + oldpass);
 //    out.println("newpass: " + newpass);
 //    out.println("confirmpass: " + confirmpass);
-                if (request.getParameter("btn_submit") != null) {
+    
+      if (request.getParameter("btn_submit") != null) {
 
-                    if (oldpass.equals(dbpass)) {
+                if (oldpass.equals(dbpass)) {
 
-                        if (newpass.equals(confirmpass)) {
+                    if (newpass.equals(confirmpass)) {
 
-                            String update = " update tbl_student set student_password='" + newpass + "' where student_id='" + fid + "'";
+                            String update = " update tbl_admin set admin_password='" + newpass + "' where admin_id='"+fid+"'";
                             if (con.executeCommand(update)) {
         %>
         <script>
@@ -45,23 +51,23 @@
             window.location('ChangePassword.jsp');
         </script>
         <%
-            }
-        } else {
-        %>
-        <script>
+                            }
+                        }else{
+                        %>
+                        <script>
             alert("Please Check Confirm Password ");
             window.location('ChangePassword.jsp');
         </script> 
         <%
-            }
-        } else {
-        %>
-        <script>
+                    }
+                    }else{
+                    %>
+                    <script>
             alert("Please enter correct old password ");
             window.location('ChangePassword.jsp');
         </script> 
         <%
-                    }
+                }
                 }
             }
 

@@ -16,7 +16,7 @@
         <h1> View Profile</h1>
         
                <%
-        String SelQry ="select * from tbl_admin";
+        String SelQry ="select * from tbl_admin where admin_id='"+session.getAttribute("adminid")+"'";
         ResultSet rss = con.selectCommand(SelQry);
         rss.next();
         

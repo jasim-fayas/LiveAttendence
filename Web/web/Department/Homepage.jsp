@@ -21,5 +21,7 @@
         <a href="ChangePassword.jsp">Change Password</a>
           <br>
         <a href="MyProfile.jsp">My Profile</a>
+           <br>
+        <a href="EditProfile.jsp">Edit Profile</a>
     </body>
 </html>

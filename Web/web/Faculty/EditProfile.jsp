@@ -24,7 +24,7 @@
          String email=request.getParameter("email");
          String contact=request.getParameter("contact");
       
-         String update="update tbl_faculty set faculty_name='"+facultyname+"',faculty_email='"+email+"',faculty_contact='"+contact+"'";
+         String update="update tbl_faculty set faculty_name='"+facultyname+"',faculty_email='"+email+"',faculty_contact='"+contact+"' where faculty_id='"+session.getAttribute("facultyid")+"'";
          con.executeCommand(update);
          response.sendRedirect("MyProfile.jsp");
      }

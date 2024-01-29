@@ -25,7 +25,7 @@
          String email=request.getParameter("email");
          String contact=request.getParameter("contact");
       
-         String update="update tbl_student set student_name='"+facultyname+"',student_email='"+email+"',student_contact='"+contact+"'";
+         String update="update tbl_student set student_name='"+facultyname+"',student_email='"+email+"',student_contact='"+contact+"' where student_id='"+session.getAttribute("studentid")+"'";
         //out.print(update);
          con.executeCommand(update);
          response.sendRedirect("MyProfile.jsp");
@@ -36,20 +36,20 @@
             <table border="1" align="center">
                 <tr>
                     <td>
-                        Faculty name
+                        Student name
                     </td>
                     <td>
                          <input type="text" name="name" value="<%=faculty.getString("student_name")%>">
                     </td>
                 </tr>
                 <tr>
-                    <td>Faculty Email</td>
+                    <td> Student Email</td>
                     <td>
                         <input type="email" name="email" value="<%=faculty.getString("student_email")%>">
                     </td>
                 </tr>
                 <tr>
-                    <td>Faculty Contact</td>
+                    <td> Student Contact</td>
                     <td>
                         <input type="number" name="contact" value="<%=faculty.getString("student_contact")%>">
                     </td>

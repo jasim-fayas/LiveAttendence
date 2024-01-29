@@ -15,5 +15,6 @@
         <h1>Hello parent</h1>
         <a href="MyProfile.jsp"> View profile</a>
          <a href="ChangePassword.jsp"> Change Password</a>
+            <a href="EditProfile.jsp"> Edit Profile</a>
     </body>
 </html>

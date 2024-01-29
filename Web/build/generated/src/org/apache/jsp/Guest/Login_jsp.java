@@ -65,7 +65,7 @@ public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        ");
 
      if(request.getParameter("btn_submit")!=null){
-         String email=request.getParameter("txt_email");
+             String email=request.getParameter("txt_email");
          String password=request.getParameter("txt_password");
         
          String selectadmin="select * from tbl_admin where admin_email='"+email+"' and admin_password='"+password+"'";
