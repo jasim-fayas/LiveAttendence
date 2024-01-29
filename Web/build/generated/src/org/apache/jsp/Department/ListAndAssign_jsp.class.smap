@@ -1,0 +1,24 @@
+SMAP
+ListAndAssign_jsp.java
+JSP
+*S JSP
+*F
++ 0 ListAndAssign.jsp
+Department/ListAndAssign.jsp
+*L
+5:45
+6:46,9
+7,30:55
+37,7:86
+43,3:93
+46:96,3
+47,2:99
+49:101,3
+50,2:104
+52:106,3
+53,2:109
+55:111,5
+56,6:116
+62,2:123
+63,6:125
+*E
