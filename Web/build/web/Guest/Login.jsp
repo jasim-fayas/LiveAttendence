@@ -28,7 +28,7 @@
          String selectparent="select * from tbl_parent where parent_email='"+email+"' and parent_password='"+password+"'";
          ResultSet parent=con.selectCommand(selectparent);
          
-         String selectstudent="select * from tbl_student s inner join tbl_course c on s.course_id=c.course_id inner join tbl_department dep on s.department_id=dep.department_id  where student_email='"+email+"' and student_password='"+password+"'";
+         String selectstudent="select * from tbl_student s inner join tbl_course c on s.course_id=c.course_id inner join tbl_department dep on s.department_id=dep.department_id where student_email='"+email+"' and student_password='"+password+"'";
          ResultSet student=con.selectCommand(selectstudent);
         
          String selectteacher="select * from tbl_faculty t inner join tbl_department dep on t.department_id=dep.department_id where faculty_email='"+email+"' and faculty_password='"+password+"'";
@@ -46,7 +46,7 @@
          else if(student.next()){
                 session.setAttribute("studentid", student.getString("student_id"));
                 session.setAttribute("studentname", student.getString("student_name"));
-                session.setAttribute("courseid", student.getString("course_id"));
+                session.setAttribute("courseid", student.getString("course_id"));                          
                 session.setAttribute("departmentid", student.getString("department_id"));
                 response.sendRedirect("../Student/Homepage.jsp");
              }

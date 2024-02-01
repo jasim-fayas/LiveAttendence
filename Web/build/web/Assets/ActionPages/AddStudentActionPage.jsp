@@ -106,7 +106,7 @@
             }
 
         }
-
+        //String parent_id = request.getParameter("id");
         String select = "select * from tbl_student where student_email='" + value[2] + "'";
         ResultSet rs = obj.selectCommand(select);
         if (rs.next()) {
@@ -119,8 +119,9 @@
 </script>
 <%
 } else {
-    String InsQry = "insert into tbl_student(student_name,student_contact,student_email,student_photo,student_address,place_id,student_gender,student_dob,course_id,student_password,department_id)"
-            + "values('" + value[0] + "','" + value[1] + "','" + value[2] + "','" + photo + "','" + value[3] + "','" + value[5] + "','" + value[6] + "','" + value[7] + "','" + value[8] + "','" + value[9] + "','"+session.getAttribute("departmentid")+"')";
+           
+    String InsQry = "insert into tbl_student(student_name,student_contact,student_email,student_photo,student_address,place_id,student_gender,student_dob,course_id,student_password,department_id,parent_id)"
+            + "values('" + value[0] + "','" + value[1] + "','" + value[2] + "','" + photo + "','" + value[3] + "','" + value[5] + "','" + value[6] + "','" + value[7] + "','" + value[8] + "','" + value[9] + "','"+session.getAttribute("departmentid")+"','"+ value[10] +"')";
 
           //  System.out.println(InsQry);
     out.println(InsQry);

@@ -15,6 +15,7 @@
     <body>
         <h1>Add Parent</h1>
         <%
+            String did = session.getAttribute("departmentid").toString();
             if (request.getParameter("btn_submit") != null) {
                 String name = request.getParameter("txt_name");
                 String contact = request.getParameter("txt_contact");
@@ -22,8 +23,8 @@
                 String password = request.getParameter("txt_password");
                 String address = request.getParameter("txt_address");
 
-                String insqry = " insert into tbl_parent (parent_name,parent_contact,parent_email,parent_password,parent_address) values ('" + name + "','" + contact + "','" + email + "','" + password + "','" + address + "') ";
-              //out.print(insqry);
+                String insqry = " insert into tbl_parent (parent_name,parent_contact,parent_email,parent_password,parent_address,department_id) values ('" + name + "','" + contact + "','" + email + "','" + password + "','" + address + "','"+did+"')";
+             // out.print(insqry);
                 if (con.executeCommand(insqry)) {
 
         %>
@@ -36,7 +37,7 @@
 
         %>
    <script>
-            alert("Registraction Failed");
+          alert("Registraction Failed");
             window.location('AddParent.jsp');
 
         </script>

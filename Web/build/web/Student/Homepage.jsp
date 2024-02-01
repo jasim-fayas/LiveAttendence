@@ -18,5 +18,7 @@
         <a href="ChangePassword.jsp">Change Password</a>
         <br>
         <a href="EditProfile.jsp">Edit Profile</a>
+         <br>
+        <a href="ViewTimeTable.jsp">View Time Table</a>
     </body>
 </html>

@@ -14,8 +14,7 @@
     <body>
         <h1>Hello Department</h1>
         
-        <a href="AddStudent.jsp">Add Student</a>
-        <br>
+       
         <a href="ListAndAssign.jsp">Assign Faculty</a>
          <br>
         <a href="ChangePassword.jsp">Change Password</a>
@@ -23,5 +22,9 @@
         <a href="MyProfile.jsp">My Profile</a>
            <br>
         <a href="EditProfile.jsp">Edit Profile</a>
+             <br>
+        <a href="AddParent.jsp">Add Parent</a>
+          <br>
+        <a href="ViewAddedParents.jsp">View Added Parent</a>
     </body>
 </html>

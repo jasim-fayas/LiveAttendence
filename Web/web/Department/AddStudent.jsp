@@ -117,6 +117,17 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>
+                        Parent ID
+                    </td>
+                     <td>
+                         <input type="text" name="parent_id" value="<%=request.getParameter("id")%>">
+                   
+                    </td>
+                </tr>
+                <tr>
+                   
+                
                     <td colspan="2" align="center">
                         <input type="submit" name="save" value="save">
                         <input type="reset" name="reset" value="cancel">
