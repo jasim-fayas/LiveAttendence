@@ -20,5 +20,9 @@
            <br>
         <br>
          <a href="ChangePassword.jsp">Change Password</a>
+          <br>
+          <br>
+          <a href="Attendence.jsp".jsp">Add Attendance</a>
+           <br>
     </body>
 </html>

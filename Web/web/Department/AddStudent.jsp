@@ -14,7 +14,7 @@
     </head>
     <body>
         <h1 align="center">Add Student</h1>
-         <form method="post" enctype="multipart/form-data" action="../Assets/ActionPages/AddStudentActionPage.jsp">
+        <form method="post" enctype="multipart/form-data" action="../Assets/ActionPages/AddStudentActionPage.jsp">
             <table border="2" align="center">
                 <tr>
                     <td>Name</td>
@@ -52,18 +52,18 @@
                         <select name="district" onchange="getPlace(this.value)">
                             <option value="">---select---</option>
                             <%
-                             String selectdistrict="select * from tbl_district";
-                             ResultSet objdistrict=con.selectCommand(selectdistrict);
-                             while(objdistrict.next())
-                             {
+                                String selectdistrict = "select * from tbl_district";
+                                ResultSet objdistrict = con.selectCommand(selectdistrict);
+                                while (objdistrict.next()) {
                             %>
                             <option value="<%=objdistrict.getString("district_id")%>"><%=objdistrict.getString("district_name")%></option>
                             <%
-                             }
+                                }
                             %>
                         </select>
                     </td>
                 </tr>
+              
                 <tr>
                     <td>Place</td>
                     <td>
@@ -90,44 +90,52 @@
                     <td>
                         <select name="course">
                             <option value="">---select---</option>
-                             <%
-                             String cid = session.getAttribute("departmenttypeid").toString();
-                           
-                             String selectcourse="select * from tbl_course p inner join tbl_department q on p.department_id=q.department_id inner join tbl_department_type pqr on q.department_type_id=pqr.department_type_id where pqr.department_type_id='"+cid+"'";
-                             
-                             ResultSet objcourse=con.selectCommand(selectcourse);
-                             while(objcourse.next())
-                             {
+                            <%
+                                String cid = session.getAttribute("departmenttypeid").toString();
+
+                                String selectcourse = "select * from tbl_course p inner join tbl_department q on p.department_id=q.department_id inner join tbl_department_type pqr on q.department_type_id=pqr.department_type_id where pqr.department_type_id='" + cid + "'";
+
+                                ResultSet objcourse = con.selectCommand(selectcourse);
+                                while (objcourse.next()) {
                             %>
                             <option value="<%=objcourse.getString("course_id")%>"><%=objcourse.getString("course_name")%></option>
                             <%
-                             }
+                                }
                             %>
                         </select>
                     </td>
                 </tr><%
                  // out.println(cid);
-                  //out.println(selectcourse);
-                %>
-               
+                    //out.println(selectcourse);
+%>
+   <tr>
+                    <td>Semester</td>
+                    <td>
+                        <select name="district" onchange="getPlace(this.value)">
+                            <option value="">---select---</option>
+                            <%
+                                String selectsemester = "select * from tbl_semester";
+                                ResultSet objsemester = con.selectCommand(selectsemester);
+                                while (objsemester.next()) {
+                            %>
+                            <option value="<%=objsemester.getString("semester_id")%>"><%=objsemester.getString("semester_name")%></option>
+                            <%
+                                }
+                            %>
+                        </select>
+                    </td>
+                </tr>
                 <tr>
                     <td>Password</td>
                     <td>
                         <input type="password" name="password">
+                        <input type="hidden" name="parent_id" value="<%=request.getParameter("id")%>">
+
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        Parent ID
-                    </td>
-                     <td>
-                         <input type="text" name="parent_id" value="<%=request.getParameter("id")%>">
-                   
-                    </td>
-                </tr>
-                <tr>
-                   
-                
+
+
                     <td colspan="2" align="center">
                         <input type="submit" name="save" value="save">
                         <input type="reset" name="reset" value="cancel">
@@ -138,16 +146,16 @@
     </body>
     <script src="../Assets/JQ/jQuery.js"></script>
     <script>
-        function getPlace(did)
-        {
-            $.ajax({
-                url: "../Assets/AjaxPages/AjaxPlace.jsp?did=" + did,
-                success: function(html) {
-                    $("#sel_place").html(html);
+                            function getPlace(did)
+                            {
+                                $.ajax({
+                                    url: "../Assets/AjaxPages/AjaxPlace.jsp?did=" + did,
+                                    success: function(html) {
+                                        $("#sel_place").html(html);
 
-                }
-            });
-        }
+                                    }
+                                });
+                            }
     </script>
-    </body>
+</body>
 </html>

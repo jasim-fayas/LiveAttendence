@@ -23,6 +23,9 @@
            <br>
         <a href="EditProfile.jsp">Edit Profile</a>
              <br>
+                   <br>
+                   <a href="AddStudent.jsp">Add Student</a>
+          <br>
         <a href="AddParent.jsp">Add Parent</a>
           <br>
         <a href="ViewAddedParents.jsp">View Added Parent</a>

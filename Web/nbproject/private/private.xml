@@ -3,15 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/LiveAttendence/Web/web/Student/ViewTimeTable.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Department/AddParent.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Student/Homepage.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Assets/ActionPages/AddStudentActionPage.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Department/ViewAddedParents.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Guest/Login.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Student/MyProfile.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Department/AddStudent.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Department/Homepage.jsp</file>
+            <file>file:/D:/LiveAttendence/Web/src/java/DB/NewWebService.java</file>
         </group>
     </open-files>
 </project-private>
