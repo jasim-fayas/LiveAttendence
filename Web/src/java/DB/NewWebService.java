@@ -181,24 +181,23 @@ public class NewWebService {
     public String timetabledetails(@WebParam(name = "id") String id, @WebParam(name = "deptid") String deptid) {
         //TODO write your implementation code here:
         
-        String timetableqry = " select * from tbl_timetable p inner join tbl_subject q on p.subject_id=q.subject_id inner join tbl_course r on q.course_id=r.course_id inner join tbl_assign s on p.subject_id=s.subject_id where s.faculty_id='"+id+"'  ";
+        String timetableqry = "select * from tbl_timetable p inner join tbl_subject q on p.subject_id=q.subject_id inner join tbl_course r on q.course_id=r.course_id inner join tbl_assign s on p.subject_id=s.subject_id where s.faculty_id='"+id+"'  ";
        ResultSet time = con.selectCommand(timetableqry);
          JSONArray t = new JSONArray();
-        
+        JSONObject to = new JSONObject();
          try {
             while (time.next()) {
-                JSONObject to = new JSONObject();
-                to.put("name", time.getString("timetable_day"));       
-                to.put("hour", time.getString("timetable_hour"));
-                to.put("sname", time.getString("subject_name"));
-                to.put("cname", time.getString("course_name"));
-                t.put(to);
+                
+                to.put(time.getString("timetable_hour")+time.getString("timetable_day"), time.getString("subject_name"));
+                to.put(time.getString("timetable_day")+time.getString("timetable_hour"), time.getString("course_name"));
+               
 
             }
         } catch (SQLException | JSONException ex) {
             Logger.getLogger(NewWebService.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.print(t.toString());
+         t.put(to);
         return t.toString();
     }
 
