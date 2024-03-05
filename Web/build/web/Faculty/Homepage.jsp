@@ -22,7 +22,10 @@
          <a href="ChangePassword.jsp">Change Password</a>
           <br>
           <br>
-          <a href="Attendence.jsp".jsp">Add Attendance</a>
+          <a href="Attendence.jsp">Add Attendance</a>
+           <br>
+              <br>
+              <a href="ViewTimeTable.jsp".jsp">View timetable</a>
            <br>
     </body>
 </html>

@@ -14,20 +14,29 @@
     <body>
         <h1>Hello Department</h1>
         
+        <a href="MyProfile.jsp"><Button >My Profile</Button></a>
+        
+        <a href="EditProfile.jsp"><Button >Edit Profile</Button></a>
        
-        <a href="ListAndAssign.jsp">Assign Faculty</a>
-         <br>
-        <a href="ChangePassword.jsp">Change Password</a>
-          <br>
-        <a href="MyProfile.jsp">My Profile</a>
-           <br>
-        <a href="EditProfile.jsp">Edit Profile</a>
-             <br>
-                   <br>
-                   <a href="AddStudent.jsp">Add Student</a>
-          <br>
-        <a href="AddParent.jsp">Add Parent</a>
-          <br>
-        <a href="ViewAddedParents.jsp">View Added Parent</a>
+        <a href="ChangePassword.jsp"><Button >Change Password</Button></a>
+       
+        
+        <a href="AddParent.jsp"><Button > Add Parent</Button></a>
+        
+        
+        
+        
+         <a href="ViewAddedParents.jsp"><Button > Add Student via Parent</Button></a>
+        
+      
+          
+        <a href="AssignRollNumber.jsp"><Button >Assign Roll Number</Button></a>
+        
+       
+       
+         <a href="ListAndAssign.jsp"><Button >Assign Subject to Faculty</Button></a>
+        
+        <a href="ViewAttendence.jsp"><Button >View Attendence</Button></a>
+       
     </body>
 </html>

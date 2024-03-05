@@ -1,10 +1,11 @@
-package org.apache.jsp.Student;
+package org.apache.jsp.Faculty;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.util.ArrayList;
 
-public final class Complaint_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class AllottedHours_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -48,35 +49,46 @@ public final class Complaint_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>Add Complaint</title>\n");
+      out.write("        <title>Allotted Hours</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <h1>Complaint</h1>\n");
+      out.write("        <h1>Hello Faculty</h1>\n");
+      out.write("       ");
+   ArrayList<String> days = new ArrayList<String>();
+    days.add("Monday");
+    days.add("Tuesday");
+    days.add("Wednesday");
+    days.add("Thursday");
+    days.add("Friday"); 
+      out.write("\n");
       out.write("        <form method=\"post\">\n");
-      out.write("            <table>\n");
-      out.write("                <tr>\n");
-      out.write("                    <td>\n");
-      out.write("                        Complaint Title\n");
-      out.write("                    </td>\n");
-      out.write("                    <td>\n");
-      out.write("                        <input type=\"text\" name=\"txt_title\">\n");
-      out.write("                    </td>\n");
-      out.write("                </tr>\n");
-      out.write("                <tr>\n");
-      out.write("                    <td>\n");
-      out.write("                        Complaint Content\n");
-      out.write("                    </td>\n");
-      out.write("                    <td>\n");
-      out.write("                         <input type=\"text\" name=\"txt_content\">\n");
-      out.write("                    </td>\n");
-      out.write("                </tr>\n");
-      out.write("                <tr align=\"center\">\n");
-      out.write("                    <td colspan=\"2\" >\n");
-      out.write("                        <input type=\"submit\" name=\"btn_submit\" value=\"Submit\" >\n");
-      out.write("                    </td>\n");
-      out.write("                </tr>\n");
-      out.write("            </table>\n");
+      out.write("        <table border=\"2\" align=\"center\">\n");
+      out.write("            <tr>\n");
+      out.write("                <td>\n");
+      out.write("                Select Day\n");
+      out.write("               </td>\n");
+      out.write("               <td>\n");
+      out.write("                   <select name=\"selday\">\n");
+      out.write("                       <option>---SELECT---</option>\n");
+      out.write("                        ");
+ for (String day : days) { 
+      out.write("\n");
+      out.write("                            <option>");
+      out.print( day );
+      out.write("</option>\n");
+      out.write("                        ");
+ } 
+      out.write("\n");
+      out.write("                       \n");
+      out.write("                   </select>\n");
+      out.write("               </td>\n");
+      out.write("               <td>\n");
+      out.write("                   <input type=\"submit\" name=\"btn_submit\" value=\"submit\">\n");
+      out.write("               </td>\n");
+      out.write("            </tr>\n");
+      out.write("        </table>\n");
       out.write("        </form>\n");
+      out.write("        \n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

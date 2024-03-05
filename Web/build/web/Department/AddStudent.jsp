@@ -67,9 +67,10 @@
                 <tr>
                     <td>Place</td>
                     <td>
-                        <select name="place" id="sel_place">
-                            <option value="">---select---</option>
+                        <select name="sel_place" id="sel_place">
+                            <option>---select---</option>
                         </select>
+                      
                     </td>
                 </tr>
                 <tr>
@@ -104,14 +105,11 @@
                             %>
                         </select>
                     </td>
-                </tr><%
-                 // out.println(cid);
-                    //out.println(selectcourse);
-%>
+                </tr>
    <tr>
                     <td>Semester</td>
                     <td>
-                        <select name="district" onchange="getPlace(this.value)">
+                        <select name="semester">
                             <option value="">---select---</option>
                             <%
                                 String selectsemester = "select * from tbl_semester";
@@ -129,8 +127,8 @@
                     <td>Password</td>
                     <td>
                         <input type="password" name="password">
-                        <input type="hidden" name="parent_id" value="<%=request.getParameter("id")%>">
-
+                    
+<input type="hidden" name="parent_id" value="<%=request.getParameter("id")%>">
                     </td>
                 </tr>
                 <tr>
@@ -146,16 +144,18 @@
     </body>
     <script src="../Assets/JQ/jQuery.js"></script>
     <script>
-                            function getPlace(did)
-                            {
-                                $.ajax({
-                                    url: "../Assets/AjaxPages/AjaxPlace.jsp?did=" + did,
-                                    success: function(html) {
-                                        $("#sel_place").html(html);
-
-                                    }
-                                });
-                            }
+                         function getPlace(did) {
+    $.ajax({
+        url: "../Assets/AjaxPages/AjaxPlace.jsp?did=" + did,
+        success: function(html) {
+            $("#sel_place").html(html);
+            // Assuming you have a hidden input field with the id "place_id"
+            // Set the selected place's value in the hidden input field
+            var selectedPlaceId = $("#sel_place").val();
+            $("#place_id").val(selectedPlaceId);
+        }
+    });
+}
     </script>
 </body>
 </html>

@@ -16,5 +16,13 @@
         <a href="ChangePassword.jsp">Change Password</a><br>
         <a href="ViewProfile.jsp">View profile</a><br>
            <a href="EditProfile.jsp"> Edit Profile</a>
+           <a href="AddPlace.jsp"> Add Place</a>
+           <a href="TimeTable.jsp"> Add Time Table</a>
+           <a href="AddCourse.jsp"> Add course </a>
+             <a href="AddDepartment.jsp"> Add department </a>
+               <a href="AddSemester.jsp"> Add semester </a>
+                 <a href="AddSubject.jsp"> Add  subject</a>
+                 <a href="AddFaculty.jsp"> Add  faculty</a>
+                 <a href="AddSubject.jsp"> Add  Subjects</a>
     </body>
 </html>

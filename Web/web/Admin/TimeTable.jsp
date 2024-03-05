@@ -93,7 +93,7 @@
                     }
                 %>
                 <td>
-                    <select id="sel_subject" onchange="submitTimetable(<%= i%>, '<%= course%>', '<%= semester%>', this.value, '<%= day%>')">
+                    <select id="sel_subject" onchange="submitTimetable(<%=i%>, '<%= course%>', '<%= semester%>', this.value, '<%= day%>')">
                         <option value="">Select</option>
                         <%
                             String selQry = "SELECT * FROM tbl_subject WHERE semester_id='" + semester + "' and course_id='" + course + "'";
@@ -147,11 +147,11 @@
 
 <script src="../Assets/JQ/jQuery.js"></script>
 <script>
-    function submitTimetable(hour, semester, subject, day) {
+    function submitTimetable(hour,cid, semester, subject, day) {
         $.ajax({
             url: "../Assets/AjaxPages/AjaxTimeTable.jsp?hour=" + hour + "&semester=" + semester + "&subject=" + subject + "&day=" + day,
             success: function(html) {
-                window.location = 'TimeTable.jsp?sel_semester=' + semester + '&btn_submit=Submit';
+                window.location = 'TimeTable.jsp?sel_course='+cid+'&sel_semester=' + semester + '&btn_submit=Submit';
             }
         });
     }

@@ -95,7 +95,7 @@
                         date = request.getParameter("txt_date");
                         course = Integer.parseInt(request.getParameter("txt_course"));
                         String semester = request.getParameter("txt_semester");
-                        String selQry = "select * from tbl_student s inner join tbl_course se on se.course_id=s.course_id where s.course_id='" + course + "' and semester_id='"+semester+"'";
+                        String selQry = "select * from tbl_student s inner join tbl_course se on se.course_id=s.course_id where s.course_id='" + course + "' and semester_id='"+semester+"' ORDER BY s.student_name";
                         ResultSet res = con.selectCommand(selQry);
                         while (res.next()) {
                             i++;

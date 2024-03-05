@@ -35,13 +35,6 @@ public class ComplaintAdapter extends RecyclerView.Adapter<ComplaintAdapter.MyVi
         return new MyViewHolder(view);
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-//        Picasso.get().load(pic[position]).into(holder.propic);
-        holder.titleText.setText(title[position]);
-        holder.detailsText.setText(details[position]);
-        holder.nameText.setText(name[position]);
-    }
 
     @Override
     public int getItemCount() {
@@ -72,6 +65,13 @@ public class ComplaintAdapter extends RecyclerView.Adapter<ComplaintAdapter.MyVi
                 }
             }
         }
+    }
+    @Override
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+//        Picasso.get().load(pic[position]).into(holder.propic);
+        holder.titleText.setText(title[position]);
+        holder.detailsText.setText(details[position]);
+        holder.nameText.setText(name[position]);
     }
 
     // Interface for item click events

@@ -23,5 +23,7 @@
         <a href="ViewTimeTable.jsp"><Button >View Time Table</Button></a>
           
            <a href="Complaint.jsp"><Button >Post Complaint</Button></a>
+           
+           <a href="AnonymousComplaint.jsp"><Button >Post Anonymous Complaint</Button></a>
     </body>
 </html>

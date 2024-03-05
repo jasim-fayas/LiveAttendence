@@ -31,6 +31,7 @@ public class NewWebService {
                 jo.put("id", rs.getString("faculty_id"));
                 jo.put("name", rs.getString("faculty_name"));
                 jo.put("status", rs.getString("faculty_status"));
+                 jo.put("deptid", rs.getString("department_id"));
 
                 j.put(jo);
             }
@@ -82,21 +83,75 @@ public class NewWebService {
         return "Updated";
     }
 
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "FeedbackReply")
+    public String FeedbackReply(@WebParam(name = "id") String id, @WebParam(name = "feedbackreply") String feedbackreply) {
+        //TODO write your implementation code here:
+      String verdict = "failed";
+//        String status = "1";
+        String feedback = " insert into tbl_feedback_reply (feedback_id,feedback_reply) values ('"+id+"','"+feedbackreply+"')";
+        out.print(feedback);
+        
+        if(con.executeCommand(feedback)){
+            
+            String feed = " update tbl_feedback set feedback_status='"+1+"' where feedback_id='"+ id  +"'";
+            out.print(feed);
+            con.executeCommand(feed);
+            
+            verdict = "Inserted";        }
+        
+        return verdict;
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "AddAttendenceddetails")
+    public String AddAttendenceddetails() {
+        //TODO write your implementation code here:
+        
+        String attendence = " select * from tbl_student ORDER BY student_name ASC ";
+        
+          ResultSet at = con.selectCommand(attendence);
+        JSONArray a = new JSONArray();
+        
+         try {
+            while (at.next()) {
+                JSONObject ao = new JSONObject();
+                ao.put("name", at.getString("student_name"));       
+                ao.put("id", at.getString("student_id"));
+//                fo.put("sname", fc.getString("subject_name"));
+//                fo.put("dname", fc.getString("department_type_name"));
+                a.put(ao);
+
+            }
+        } catch (SQLException | JSONException ex) {
+            Logger.getLogger(NewWebService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        System.out.print(a.toString());
+        return a.toString();
+    }
+
     /**
      * Web service operation
      */
     @WebMethod(operationName = "ComplaintDetails")
-    public String ComplaintDetails() {
+    public String ComplaintDetails(@WebParam(name = "fid") String fid, @WebParam(name = "deptid") String deptid) {
         //TODO write your implementation code here:
-
-        String complaintdetails = " select * from tbl_feedback";
+        
+        
+       String id = "0";
+        String complaintdetails = " select * from tbl_feedback p inner join tbl_student q on p.student_id=q.student_id inner join tbl_department r on q.department_id=r.department_id where feedback_status='"+id+"' and r.department_id='"+deptid+"' ORDER BY feedback_id DESC";
         ResultSet cd = con.selectCommand(complaintdetails);
         JSONArray c = new JSONArray();
 
         try {
             while (cd.next()) {
                 String stuName = "Anonymous";
-                if (cd.getInt("student_id") != 0) {
+                if (cd.getInt("feedback_a_status") != 1) {
                     String getUser = " select * from tbl_student where student_id='"+cd.getString("student_id")+"'";
                     ResultSet user = con.selectCommand(getUser);
                     if(user.next())
@@ -108,6 +163,7 @@ public class NewWebService {
                 co.put("title", cd.getString("feedback_title"));
                 co.put("details", cd.getString("feedback_content"));
                 co.put("name", stuName);
+                co.put("id", cd.getString("feedback_id"));
                 c.put(co);
 
             }
@@ -117,5 +173,34 @@ public class NewWebService {
         //  System.out.print(f.toString());
         return c.toString();
     }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "timetabledetails")
+    public String timetabledetails(@WebParam(name = "id") String id, @WebParam(name = "deptid") String deptid) {
+        //TODO write your implementation code here:
+        
+        String timetableqry = " select * from tbl_timetable p inner join tbl_subject q on p.subject_id=q.subject_id inner join tbl_course r on q.course_id=r.course_id inner join tbl_assign s on p.subject_id=s.subject_id where s.faculty_id='"+id+"'  ";
+       ResultSet time = con.selectCommand(timetableqry);
+         JSONArray t = new JSONArray();
+        
+         try {
+            while (time.next()) {
+                JSONObject to = new JSONObject();
+                to.put("name", time.getString("timetable_day"));       
+                to.put("hour", time.getString("timetable_hour"));
+                to.put("sname", time.getString("subject_name"));
+                to.put("cname", time.getString("course_name"));
+                t.put(to);
+
+            }
+        } catch (SQLException | JSONException ex) {
+            Logger.getLogger(NewWebService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        System.out.print(t.toString());
+        return t.toString();
+    }
+
 
 }

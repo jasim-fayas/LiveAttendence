@@ -23,7 +23,7 @@ TextView callsignup;
 Button calldashboard;
 
     EditText email,password;
-    String Email,Password,id,name,status;
+    String Email,Password,id,name,status,deptid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,12 +87,15 @@ callsignup = findViewById(R.id.signupText);
                     id = jo.getString("id");
                     name = jo.getString("name");
                     status = jo.getString("status");
+                    deptid = jo.getString("deptid");
+
                    Toast.makeText(Login.this, "success", Toast.LENGTH_SHORT).show();
 
 
                     SharedPreferences.Editor sh = getSharedPreferences("faculty", MODE_PRIVATE).edit();
                     sh.putString("id", id);
                     sh.putString("name", name);
+                    sh.putString("did" , deptid);
                     sh.apply();
 
                 } catch (JSONException e) {
