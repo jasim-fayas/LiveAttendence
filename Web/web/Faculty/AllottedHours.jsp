@@ -23,6 +23,23 @@
             days.add("Thursday");
             days.add("Friday");
             String id = session.getAttribute("facultyid").toString();
+
+            // Retrieve timetable data with course name
+            String timetableqry = "SELECT t.timetable_day, t.timetable_hour, s.subject_name, c.course_name FROM tbl_timetable t " +
+                                   "INNER JOIN tbl_subject s ON t.subject_id = s.subject_id " +
+                                   "INNER JOIN tbl_course c ON s.course_id = c.course_id " +
+                                   "INNER JOIN tbl_assign a ON s.subject_id = a.subject_id " +
+                                   "WHERE a.faculty_id='" + id + "'";
+            ResultSet timetableResult = con.selectCommand(timetableqry);
+            ArrayList<String[]> timetableData = new ArrayList<String[]>(); // Specify the type explicitly
+            while (timetableResult.next()) {
+                String[] rowData = new String[4];
+                rowData[0] = timetableResult.getString("timetable_day");
+                rowData[1] = timetableResult.getString("timetable_hour");
+                rowData[2] = timetableResult.getString("subject_name");
+                rowData[3] = timetableResult.getString("course_name");
+                timetableData.add(rowData);
+            }
         %>
 
         <table border="2">
@@ -31,7 +48,6 @@
                 <td>9:30-10:30</td>
                 <td>10:30-11:30</td>
                 <td>11:45-12:45</td>
-                <td>12:45-1:45</td>
                 <td>1:45-2:30</td>
                 <td>2:30-3:30</td>
             </tr>
@@ -39,24 +55,18 @@
             <tr>
                 <td height="38"><%= day %></td>
                 <% for (int i = 1; i <= 5; i++) { %>
-                <% if (day.equals("Monday") && i == 4) { %>
-                <td rowspan="6">
-                    <div id="lunch">
-                        <p>L</p>
-                        <p>U</p>
-                        <p>N</p>
-                        <p>C</p>
-                        <p>H</p>
-                    </div>
-                </td>
-                <% } %>
                 <td>
-                    <%
-                        String timetableqry = "select * from tbl_timetable p inner join tbl_subject q on p.subject_id=q.subject_id inner join tbl_course r on q.course_id=r.course_id inner join tbl_assign s on p.subject_id=s.subject_id where s.faculty_id='" + id + "'  ";
-                        ResultSet time = con.selectCommand(timetableqry);
-                        if (time.next()) {
-                            out.print(time.getString("subject_name"));
-                        } else {
+                    <% 
+                        boolean found = false;
+                        for (String[] rowData : timetableData) {
+                            if (rowData[0].equals(day) && rowData[1].equals(Integer.toString(i))) {
+                                out.print(rowData[2] + "<br>"); // Subject name
+                                out.print(rowData[3]); // Course name
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found) {
                             out.print("Free Hour");
                         }
                     %>
