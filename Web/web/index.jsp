@@ -75,8 +75,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="index.jsp" class="nav-item nav-link ">Home</a>
+                <a href="Guest/Login.jsp" class="nav-item nav-link">Login</a>
                 <a href="courses.html" class="nav-item nav-link">Courses</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -101,12 +101,13 @@
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="Assets/Template/main/img/slide2.jpg" alt="Image">
+                    <img class="w-100" src="Assets/Template/main/img/edu1.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-7">
-                                    <h1 class="display-2 text-light mb-5 animated slideInDown" style="font-size:40px;">Education Is The Best Tool To Change The World </h1>
+                                 <h1 class="display-2 text-light mb-5 animated slideInDown" style="font-size: 35px; font-family: 'Arial', sans-serif; font-weight: bold; color: #333; text-shadow: 2px 2px 4px rgba(0,0,0,0.4); line-height: 1.2;">"Education Is The Best Tool To Change The World"</h1>
+
                                     <a href="" class="btn btn-primary py-sm-3 px-sm-5">Learn More</a>
                                     <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">Our Courses</a>
                                 </div>
@@ -115,12 +116,12 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="Assets/Template/main/img/slide4.jpg" alt="Image">
+                    <img class="w-100" src="Assets/Template/main/img/edu3.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-7">
-                                    <h1 class="display-2 text-light mb-5 animated slideInDown" style="font-size:40px;">Education is one thing no one can take away from you.</h1>
+                                    <h1 class="display-2 text-light mb-5 animated slideInDown" style="font-size: 35px; font-family: 'Arial', sans-serif; font-weight: bold; color: #333; text-shadow: 2px 2px 4px rgba(0,0,0,0.4); line-height: 1.2;">"Education is one thing no one can take away from you"</h1>
                                     <a href="" class="btn btn-primary py-sm-3 px-sm-5">Learn More</a>
                                     <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">Our Courses</a>
                                 </div>
@@ -155,8 +156,8 @@
                                 <i class="fa fa-graduation-cap text-white"></i>
                             </div>
                             <div class="ps-4">
-                                <h5>Accademic Exellence </h5>
-                                <span>Clita erat ipsum lorem sit sed stet duo justo erat amet</span>
+                                <h5>Academic Excellence </h5>
+                                <span>Since 1956 We Are In This Field To Shape Children</span>
                             </div>
                         </div>
                     </div>
@@ -169,7 +170,7 @@
                             </div>
                             <div class="ps-4">
                                 <h5>Top Rated Faculties</h5>
-                                <span>Clita erat ipsum lorem sit sed stet duo justo erat amet</span>
+                                <span>We Have Top Rated Expert Faculties For Separate Subjects To Improve More Vision To Students</span>
                             </div>
                         </div>
                     </div>
@@ -182,7 +183,7 @@
                             </div>
                             <div class="ps-4">
                                 <h5>We Bring Best Out Of Students</h5>
-                                <span>Clita erat ipsum lorem sit sed stet duo justo erat amet</span>
+                                <span>Not Just Academics We Focus On Extra Activities Too</span>
                             </div>
                         </div>
                     </div>
@@ -199,28 +200,38 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="position-relative overflow-hidden ps-5 pt-5 h-100" style="min-height: 400px;">
-                        <img class="position-absolute w-100 h-100" src="Assets/Template/main/img/about-1.jpg" alt="" style="object-fit: cover;">
-                        <img class="position-absolute top-0 start-0 bg-white pe-3 pb-3" src="Assets/Template/main/img/about-2.jpg" alt="" style="width: 200px; height: 200px;">
+                        <img class="position-absolute w-100 h-100" src="Assets/Template/main/img/college4.avif" alt="" style="object-fit: cover;">
+                        <img class="position-absolute top-0 start-0 bg-white pe-3 pb-3" src="Assets/Template/main/img/college3.jpg" alt="" style="width: 200px; height: 200px;">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="h-100">
                         <h6 class="text-primary text-uppercase mb-2">About Us</h6>
-                        <h1 class="display-6 mb-4">We Help Students To Pass Test & Get A License On The First Try</h1>
-                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        <h1 class="display-6 mb-4">We Help Students To Build A Better Human In Them</h1>
+                        <p>Academics
+The faculty was amazing and friendly, also the teachers in the B.com department is well equipped with the latest news and technologies. The b.com graduation from IGC college will make a person ready for employment although I would suggest getting one more additional degree to strengthen one's resume.
+
+Placements
+The placements are low although most of the colleges in the same level offer low placements, but the placements team is doing the best it can to improve the current condition, but the salary offered is low in comparison.
+
+</p>
+                        <p class="mb-4">Value for Money
+The course is a good addition to the academic, social and networking aspects of a student. By doing b.com from IGC College gave me various opportunities to network with people and students from different departments. The course fee was approximately 10000 INR per semester that equals 20000 per year. So when in comparison to other colleges IGC College is great value for money.
+
+Campus Life
+The campus life was amazing, be it socialising, networking, events, IGC college was filled with all this. Even though the college was shut for 1 whole year due to the covid pandemic we didn't feel a deterioration in our campus life. Also, all the departments are inside one fencing, so this allowed to network with students from all over the campus.</p>
                         <div class="row g-2 mb-4 pb-2">
                             <div class="col-sm-6">
-                                <i class="fa fa-check text-primary me-2"></i>Fully Licensed
+                                <i class="fa fa-check text-primary me-2"></i>Under MGU
                             </div>
                             <div class="col-sm-6">
-                                <i class="fa fa-check text-primary me-2"></i>Online Tracking
+                                <i class="fa fa-check text-primary me-2"></i>NAAC Approved Campus
                             </div>
                             <div class="col-sm-6">
-                                <i class="fa fa-check text-primary me-2"></i>Afordable Fee 
+                                <i class="fa fa-check text-primary me-2"></i>Affordable Fee 
                             </div>
                             <div class="col-sm-6">
-                                <i class="fa fa-check text-primary me-2"></i>Best Trainers
+                                <i class="fa fa-check text-primary me-2"></i>Best Faculties
                             </div>
                         </div>
                         <div class="row g-4">
@@ -228,11 +239,11 @@
                                 <a class="btn btn-primary py-3 px-5" href="">Read More</a>
                             </div>
                             <div class="col-sm-6">
-                                <a class="d-inline-flex align-items-center btn btn-outline-primary border-2 p-2" href="tel:+0123456789">
+                                <a class="d-inline-flex align-items-center btn btn-outline-primary border-2 p-2" href="tel:+919961299046">
                                     <span class="flex-shrink-0 btn-square bg-primary">
                                         <i class="fa fa-phone-alt text-white"></i>
                                     </span>
-                                    <span class="px-3">+012 345 6789</span>
+                                    <span class="px-3">+919961299046</span>
                                 </a>
                             </div>
                         </div>
@@ -248,8 +259,8 @@
     <div class="container-xxl courses my-6 py-6 pb-0">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h6 class="text-primary text-uppercase mb-2">Tranding Courses</h6>
-                <h1 class="display-6 mb-4">Our Courses Upskill You With Driving Training</h1>
+                <h6 class="text-primary text-uppercase mb-2">Trending Courses</h6>
+                <h1 class="display-6 mb-4">We Offer Best Courses With Add On</h1>
             </div>
             <div class="row g-4 justify-content-center">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -363,51 +374,51 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="text-primary text-uppercase mb-2">Why Choose Us!</h6>
-                    <h1 class="display-6 mb-4">Best Driving Training Agency In Your City</h1>
-                    <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <h1 class="display-6 mb-4">We Reshape Your Children To The Best Possible Shape Achievable</h1>
+                    <p class="mb-5">We Indira Gandhi Group Of Institutions Offer Best To The Children</p>
                     <div class="row gy-5 gx-4">
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="flex-shrink-0 btn-square bg-primary me-3">
                                     <i class="fa fa-check text-white"></i>
                                 </div>
-                                <h5 class="mb-0">Fully Licensed</h5>
+                                <h5 class="mb-0">NAAC Approved Campus</h5>
                             </div>
-                            <span>Magna sea eos sit dolor, ipsum amet ipsum lorem diam eos</span>
+                            <span>We Have A NAAC A++ Approved Campus To Explore And Study</span>
                         </div>
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="flex-shrink-0 btn-square bg-primary me-3">
                                     <i class="fa fa-check text-white"></i>
                                 </div>
-                                <h5 class="mb-0">Online Tracking</h5>
+                                <h5 class="mb-0">Not Just Academics</h5>
                             </div>
-                            <span>Magna sea eos sit dolor, ipsum amet ipsum lorem diam eos</span>
+                            <span>We Have A Passionate Team For Forming Clubs To Explore Other Skills</span>
                         </div>
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="flex-shrink-0 btn-square bg-primary me-3">
                                     <i class="fa fa-check text-white"></i>
                                 </div>
-                                <h5 class="mb-0">Afordable Fee</h5>
+                                <h5 class="mb-0">Affordable Fee</h5>
                             </div>
-                            <span>Magna sea eos sit dolor, ipsum amet ipsum lorem diam eos</span>
+                            <span>Study Comes First Then Fees. We Provide Various Schlorships To Students Based On Their Performance</span>
                         </div>
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="flex-shrink-0 btn-square bg-primary me-3">
                                     <i class="fa fa-check text-white"></i>
                                 </div>
-                                <h5 class="mb-0">Best Trainers</h5>
+                                <h5 class="mb-0">Best Faculties</h5>
                             </div>
-                            <span>Magna sea eos sit dolor, ipsum amet ipsum lorem diam eos</span>
+                            <span>We Have The Best Around The World To Guide To Excellence</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="position-relative overflow-hidden pe-5 pt-5 h-100" style="min-height: 400px;">
-                        <img class="position-absolute w-100 h-100" src="Assets/Template/main/img/about-1.jpg" alt="" style="object-fit: cover;">
-                        <img class="position-absolute top-0 end-0 bg-white ps-3 pb-3" src="Assets/Template/main/img/about-2.jpg" alt="" style="width: 200px; height: 200px">
+                        <img class="position-absolute w-100 h-100" src="Assets/Template/main/img/edu1.jpg" alt="" style="object-fit: cover;">
+                        <img class="position-absolute top-0 end-0 bg-white ps-3 pb-3" src="Assets/Template/main/img/edu3.jpg" alt="" style="width: 200px; height: 200px">
                     </div>
                 </div>
             </div>
@@ -421,7 +432,7 @@
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <h6 class="text-primary text-uppercase mb-2">Meet The Team</h6>
-                <h1 class="display-6 mb-4">We Have Great Experience Of Driving</h1>
+                <h1 class="display-6 mb-4"  style="font-size: 29px;">We Have Great Experience Of Academic Excellence</h1>
             </div>
             <div class="row g-0 team-items">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -498,8 +509,8 @@
     <div class="container-xxl py-6">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h6 class="text-primary text-uppercase mb-2">Testimonial</h6>
-                <h1 class="display-6 mb-4">What Our Clients Say!</h1>
+                <h6 class="text-primary text-uppercase mb-2">Feedback</h6>
+                <h1 class="display-6 mb-4">What Our Students Guardians Say!</h1>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
@@ -554,10 +565,10 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Get In Touch</h4>
-                    <h2 class="text-primary mb-4"><i class="fa fa-graduation-cap text-white me-2"></i>Drivin</h2>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <h2 class="text-primary mb-4"><i class="fa fa-graduation-cap text-white me-2"></i>Live Attendance</h2>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Nellikuzhi , Kothamangalam , Kerala</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91996128368</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>igcas@gmail.com</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Quick Links</h4>
@@ -602,13 +613,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a href="#">Your Site Name</a>, All Right Reserved.
+                    &copy; <a href="#">Live Attendance</a>, All Right Reserved.
                 </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author?s credit link/attribution link/backlink. If you'd like to use the template without the footer author?s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+<!--                <div class="col-md-6 text-center text-md-end">
+                    /*** This template is free as long as you keep the footer author?s credit link/attribution link/backlink. If you'd like to use the template without the footer author?s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/
                     Designed By <a href="https://htmlcodex.com">HTML Codex</a>
                     <br>Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>

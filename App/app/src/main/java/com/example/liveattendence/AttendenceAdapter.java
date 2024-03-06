@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -44,11 +45,17 @@ public class AttendenceAdapter extends RecyclerView.Adapter<AttendenceAdapter.My
 
         //        ImageView propic;
         TextView nameText;
+        CheckBox hour1,hour2,hour3,hour4,hour5;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             nameText = itemView.findViewById(R.id.textViewStudentName);
+            hour1 = itemView.findViewById(R.id.checkBoxHour1);
+            hour2 = itemView.findViewById(R.id.checkBoxHour2);
+            hour3 = itemView.findViewById(R.id.checkBoxHour3);
+            hour4 = itemView.findViewById(R.id.checkBoxHour4);
+            hour5 = itemView.findViewById(R.id.checkBoxHour5);
 
             // Set click listener for itemView
             itemView.setOnClickListener(this);

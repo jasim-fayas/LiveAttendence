@@ -25,7 +25,11 @@
           <a href="Attendence.jsp">Add Attendance</a>
            <br>
               <br>
-              <a href="ViewTimeTable.jsp".jsp">View timetable</a>
+              <a href="ViewTimeTable.jsp"">View Student timetable</a>
+              
+               <br>
+               <a href="AllottedHours.jsp">View Faculty timetable</a>
+           <br>
            <br>
     </body>
 </html>

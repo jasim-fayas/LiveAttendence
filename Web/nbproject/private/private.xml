@@ -3,14 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/LiveAttendence/Web/web/Admin/ViewProfile.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Assets/ActionPages/AddStudentActionPage.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Department/AssignRollNumber.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Admin/Homepage.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Student/Complaint.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Student/AnonymousComplaint.jsp</file>
+            <file>file:/D:/LiveAttendence/Web/web/Faculty/Attendence.jsp</file>
+            <file>file:/D:/LiveAttendence/Web/web/index.jsp</file>
             <file>file:/D:/LiveAttendence/Web/web/Admin/TimeTable.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Department/AddStudent.jsp</file>
             <file>file:/D:/LiveAttendence/Web/web/Guest/Login.jsp</file>
             <file>file:/D:/LiveAttendence/Web/src/java/DB/NewWebService.java</file>
         </group>
