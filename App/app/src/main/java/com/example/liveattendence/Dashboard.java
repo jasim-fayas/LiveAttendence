@@ -56,7 +56,7 @@ public class Dashboard extends AppCompatActivity {
             cardtimetable.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent timetable = new Intent(Dashboard.this, timetable.class);
+                    Intent timetable = new Intent(Dashboard.this, faculty_time_table.class);
                     startActivity(timetable);
                 }
             });
