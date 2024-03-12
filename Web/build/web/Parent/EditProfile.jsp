@@ -50,7 +50,7 @@
     <a href="" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
-          <li><a href="Homepage.jsp">Home</a></li>
+          <li><a href="HomePage.jsp">Home</a></li>
       
         <li><a href="Login.php">Logout</a></li>
       </ul>
