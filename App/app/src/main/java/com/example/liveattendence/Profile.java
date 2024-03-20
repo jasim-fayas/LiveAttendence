@@ -29,7 +29,7 @@ public class Profile extends AppCompatActivity {
 
     String Name, Email, Phone, Password, Department, Subject;
 
-    Button edit;
+    Button edit,home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +43,7 @@ public class Profile extends AppCompatActivity {
         mainnam = findViewById(R.id.titleName);
         uname = findViewById(R.id.titleUsername);
         edit = findViewById(R.id.editButton);
+        home = findViewById(R.id.calllhomepage);
 //        department = findViewById(R.id.departmentname);
 //        subject = findViewById(R.id.subjectsname);
 
@@ -51,6 +52,14 @@ public class Profile extends AppCompatActivity {
             public void onClick(View v) {
                 Intent editbutton = new Intent(Profile.this, EditProfile.class);
                 startActivity(editbutton);
+            }
+        });
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent homebutton = new Intent(Profile.this , Dashboard.class);
+                startActivity(homebutton);
             }
         });
 

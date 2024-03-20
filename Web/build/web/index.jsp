@@ -1,3 +1,5 @@
+<%@page import="java.sql.ResultSet"%>
+<jsp:useBean class="DB.ConnectionClass" id="con"></jsp:useBean>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,7 +67,7 @@ https://templatemo.com/tm-557-grad-school
       <div class="video-overlay header-text">
           <div class="caption">
               <h6>Indira Gandhi Group Of Institution</h6>
-                             <h2><em>Your</em> Classroom</h2>
+                             <h2><em>No More</em> Class Bunking</h2>
               <div class="main-button">
                   <div class="scroll-to-section"><a href="#section2">Discover more</a></div>
               </div>
@@ -96,7 +98,7 @@ https://templatemo.com/tm-557-grad-school
           <div class="features-post second-features">
             <div class="features-content">
               <div class="content-show">
-                <h4><i class="fa fa-graduation-cap"></i>Virtual Class</h4>
+                <h4><i class="fa fa-graduation-cap"></i>Top Rated Faculties</h4>
               </div>
               <div class="content-hide">
                 <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
@@ -110,7 +112,7 @@ https://templatemo.com/tm-557-grad-school
           <div class="features-post third-features">
             <div class="features-content">
               <div class="content-show">
-                <h4><i class="fa fa-book"></i>Real Meeting</h4>
+                <h4><i class="fa fa-book"></i>NAAC Approved</h4>
               </div>
               <div class="content-hide">
                 <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
@@ -187,7 +189,7 @@ https://templatemo.com/tm-557-grad-school
         <div class="col-md-7 col-xs-12">
           <div class="continer centerIt">
             <div>
-              <h4>Take <em>any online course</em> and win $326 for your next class</h4>
+              <h4>Take <em>any Add On course</em> and win scholarship</h4>
               <div class="counter">
 
                 <div class="days">
@@ -217,7 +219,7 @@ https://templatemo.com/tm-557-grad-school
         <div class="col-md-5">
           <div class="right-content">
             <div class="top-content">
-              <h6>Register your free account and <em>get immediate</em> access to online courses</h6>
+              <h6>Fill And Submit <em>To Get Add On</em> access to You</h6>
             </div>
             <form id="contact" action="" method="get">
               <div class="row">
@@ -251,161 +253,38 @@ https://templatemo.com/tm-557-grad-school
 
   <section class="section courses" data-section="section4">
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="section-heading">
-            <h2>Choose Your Course</h2>
-          </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>Here is the List Of Add On Courses We Provide</h2>
+                </div>
+            </div>
         </div>
         <div class="owl-carousel owl-theme">
-          <div class="item">
-            <img src="Assets/Template/main/assets/images/courses-01.jpg" alt="Course #1">
-            <div class="down-content">
-              <h4>Digital Marketing</h4>
-              <p>You can get free images and videos for your websites by visiting Unsplash, Pixabay, and Pexels.</p>
-              <div class="author-image">
-                <img src="Assets/Template/main/assets/images/author-01.png" alt="Author 1">
-              </div>
-              <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-              </div>
+            <%
+                
+                String sel4 = "select * from tbl_add_on p inner join tbl_course q on p.course_id=q.course_id";
+                ResultSet rt = con.selectCommand(sel4);
+                int i = 0;
+                while(rt.next()) {
+                    i++;
+            %>
+            <div class="item">
+                <img src="Assets/Files/AddON/<%= rt.getString("add_on_photo") %>" alt="Course #<%=i%>">
+                <div class="down-content">
+                    <h4><%= rt.getString("add_on_name") %></h4>
+                    <p>You can get free images and videos for your websites by visiting Unsplash, Pixabay, and Pexels.</p>
+                    <div class="text-button-pay">
+<!--                        <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>-->
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="item">
-            <img src="Assets/Template/main/assets/images/courses-02.jpg" alt="Course #2">
-            <div class="down-content">
-              <h4>Business World</h4>
-              <p>Quisque cursus augue ut velit dictum, quis volutpat enim blandit. Maecenas a lectus ac ipsum porta.</p>
-              <div class="author-image">
-                <img src="Assets/Template/main/assets/images/author-02.png" alt="Author 2">
-              </div>
-              <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="Assets/Template/main/assets/images/courses-03.jpg" alt="Course #3">
-            <div class="down-content">
-              <h4>Media Technology</h4>
-              <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.</p>
-              <div class="author-image">
-                <img src="Assets/Template/main/assets/images/author-03.png" alt="Author 3">
-              </div>
-              <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="Assets/Template/main/assets/images/courses-04.jpg" alt="Course #4">
-            <div class="down-content">
-              <h4>Communications</h4>
-              <p>Download free images and videos for your websites by visiting Unsplash, Pixabay, and Pexels.</p>
-              <div class="author-image">
-                <img src="Assets/Template/main/assets/images/author-04.png" alt="Author 4">
-              </div>
-              <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="Assets/Template/main/assets/images/courses-05.jpg" alt="">
-            <div class="down-content">
-              <h4>Business Ethics</h4>
-              <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.</p>
-              <div class="author-image">
-                <img src="Assets/Template/main/assets/images/author-05.png" alt="">
-              </div>
-              <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="Assets/Template/main/assets/images/courses-01.jpg" alt="">
-            <div class="down-content">
-              <h4>Photography</h4>
-              <p>Quisque cursus augue ut velit dictum, quis volutpat enim blandit. Maecenas a lectus ac ipsum porta.</p>
-              <div class="author-image">
-                <img src="Assets/Template/main/assets/images/author-01.png" alt="">
-              </div>
-              <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="Assets/Template/main/assets/images/courses-02.jpg" alt="">
-            <div class="down-content">
-              <h4>Web Development</h4>
-              <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.</p>
-              <div class="author-image">
-                <img src="Assets/Template/main/assets/images/author-02.png" alt="">
-              </div>
-              <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="Assets/Template/main/assets/images/courses-03.jpg" alt="">
-            <div class="down-content">
-              <h4>Learn HTML CSS</h4>
-              <p>You can get free images and videos for your websites by visiting Unsplash, Pixabay, and Pexels.</p>
-              <div class="author-image">
-                <img src="Assets/Template/main/assets/images/author-03.png" alt="">
-              </div>
-              <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="Assets/Template/main/assets/images/courses-04.jpg" alt="">
-            <div class="down-content">
-              <h4>Social Media</h4>
-              <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.</p>
-              <div class="author-image">
-                <img src="Assets/Template/main/assets/images/author-04.png" alt="">
-              </div>
-              <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="Assets/Template/main/assets/images/courses-05.jpg" alt="">
-            <div class="down-content">
-              <h4>Digital Arts</h4>
-              <p>Quisque cursus augue ut velit dictum, quis volutpat enim blandit. Maecenas a lectus ac ipsum porta.</p>
-              <div class="author-image">
-                <img src="Assets/Template/main/assets/images/author-05.png" alt="">
-              </div>
-              <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="Assets/Template/main/assets/images/courses-01.jpg" alt="">
-            <div class="down-content">
-              <h4>Media Streaming</h4>
-              <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.</p>
-              <div class="author-image">
-                <img src="Assets/Template/main/assets/images/author-01.png" alt="">
-              </div>
-              <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
+            <%
+                }
+            %>
         </div>
-      </div>
     </div>
-  </section>
-  
+</section>
 
   <section class="section video" data-section="section5">
     <div class="container">
@@ -474,7 +353,9 @@ https://templatemo.com/tm-557-grad-school
         </div>
         <div class="col-md-6">
           <div id="map">
-            <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="422px" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <iframe src="https://maps.google.com/maps?q=10.0745,76.5911&output=embed" width="100%" height="422px" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
           </div>
         </div>
       </div>
@@ -487,8 +368,8 @@ https://templatemo.com/tm-557-grad-school
         <div class="col-md-12">
           <p><i class="fa fa-copyright"></i> Copyright 2020 by Live Attendance 
           
-           | Design: <a href="https://templatemo.com" rel="sponsored" target="_parent">TemplateMo</a><br>
-           Distributed By: <a href="https://themewagon.com" rel="sponsored" target="_blank">ThemeWagon</a>
+           | Design: <a href="https://templatemo.com" rel="sponsored" target="_parent">jaasimee</a><br>
+           Distributed By: <a href="https://themewagon.com" rel="sponsored" target="_blank">jaasimee</a>
           
           </p>
         </div>

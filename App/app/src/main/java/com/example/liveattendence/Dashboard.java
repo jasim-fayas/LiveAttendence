@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 public class Dashboard extends AppCompatActivity {
    CardView cardmypro;
@@ -14,13 +17,17 @@ public class Dashboard extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+
         cardmypro = findViewById(R.id.card1);
         cardlogout = findViewById(R.id.card6);
         cardcomplaint = findViewById(R.id.card5);
         cardattendence = findViewById(R.id.card4);
         cardtimetable = findViewById(R.id.card3);
+
         cardmypro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,6 +40,7 @@ public class Dashboard extends AppCompatActivity {
         cardlogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+               clearSession();
                 Intent logout = new Intent(Dashboard.this, Login.class);
                 startActivity(logout);
             }
@@ -48,7 +56,7 @@ public class Dashboard extends AppCompatActivity {
             cardattendence.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent attendence = new Intent(Dashboard.this , AddAttendence.class);
+                    Intent attendence = new Intent(Dashboard.this , Attendance_spinner.class);
                     startActivity(attendence);
                 }
             });
@@ -60,5 +68,14 @@ public class Dashboard extends AppCompatActivity {
                     startActivity(timetable);
                 }
             });
+    }
+
+    private void clearSession() {
+        SharedPreferences.Editor login = getSharedPreferences("login", MODE_PRIVATE).edit();
+        login.clear();
+        login.apply();
+        SharedPreferences.Editor editor = getSharedPreferences("faculty", MODE_PRIVATE).edit();
+        editor.clear();
+        editor.apply();
     }
 }

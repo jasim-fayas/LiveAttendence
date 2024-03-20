@@ -2,11 +2,13 @@ package com.example.liveattendence;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.content.Intent;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +23,7 @@ public class Login extends AppCompatActivity {
 
 TextView callsignup;
 Button calldashboard;
+    CheckBox rememberMeCheckbox;
 
     EditText email,password;
     String Email,Password,id,name,status,deptid;
@@ -32,6 +35,16 @@ Button calldashboard;
         setContentView(R.layout.activity_login);
 
 callsignup = findViewById(R.id.signupText);
+        rememberMeCheckbox = findViewById(R.id.rememberMeCheckbox);
+// Check if user is already logged in
+        SharedPreferences sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
+        boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
+        if (isLoggedIn) {
+            // User is already logged in, navigate to dashboard
+            startActivity(new Intent(Login.this, Dashboard.class));
+            finish(); // Finish login activity to prevent going back to it on back press
+        }
+
         callsignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,17 +64,34 @@ callsignup = findViewById(R.id.signupText);
         calldashboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Email = email.getText().toString();
-                Password = password.getText().toString();
-                LoginDetails l = new LoginDetails();
-                l.execute(Email, Password);
+                String emailText = email.getText().toString();
+                String passwordText = password.getText().toString();
+                boolean rememberMeChecked = rememberMeCheckbox.isChecked();
+
+                LoginDetails loginDetails = new LoginDetails();
+                loginDetails.execute(emailText, passwordText);
+
+                // Save login state if "Remember Me" checkbox is checked
+                if (rememberMeChecked) {
+                    SharedPreferences.Editor editor = getSharedPreferences("login", MODE_PRIVATE).edit();
+                    editor.putBoolean("isLoggedIn", true);
+                    editor.apply();
+                }
 
             }
         });
 
             }
 
-
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("Exit App")
+                .setMessage("Are you sure you want to exit?")
+                .setPositiveButton("Yes", (dialog, which) -> finishAffinity()) // Close the app
+                .setNegativeButton("No", null) // Do nothing
+                .show();
+    }
     public class LoginDetails extends AsyncTask<String, String, String> {
 
         @Override
@@ -79,7 +109,9 @@ callsignup = findViewById(R.id.signupText);
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             //Toast.makeText(Login.this, s, Toast.LENGTH_SHORT).show();
-            if (!s.equals("[]")) {
+            Log.d("Error", s);
+            Log.d("string","java.net.ConnectException: Failed to connect to /"+WebServiceCaller.ip+":8084");
+            if (!s.equals("[]") && !s.equals("java.net.ConnectException: Failed to connect to /"+WebServiceCaller.ip+":8084")) {
                 JSONArray j = null;
                 try {
                     j = new JSONArray(s);

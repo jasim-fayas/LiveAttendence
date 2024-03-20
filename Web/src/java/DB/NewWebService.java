@@ -201,5 +201,133 @@ public class NewWebService {
         return t.toString();
     }
 
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "student")
+    public String student(@WebParam(name = "did") String did, @WebParam(name = "cid") String cid, @WebParam(name = "sid") String sid) {
+        //TODO write your implementation code here:
+        String studentqy = " select * from tbl_student p inner join tbl_course q on p.course_id=q.course_id inner join tbl_semester r on p.semester_id=r.semester_id where p.course_id='"+cid+"' and p.semester_id='"+sid+"'  ORDER BY student_name ASC";
+         System.out.println(studentqy);
+                ResultSet at = con.selectCommand(studentqy);
+        JSONArray a = new JSONArray();
+        
+         try {
+            while (at.next()) {
+                JSONObject ao = new JSONObject();
+                ao.put("name", at.getString("student_name"));       
+                ao.put("id", at.getString("student_id"));
 
+               for(int i =1;i<=5;i++)
+               {
+                   String check = "false";
+                    String selQry = "select * from tbl_attendance where attendance_date=curdate() and student_id='"+at.getString("student_id")+"' and attendance_hour='"+i+"'";
+                    ResultSet rs = con.selectCommand(selQry);
+                    if(rs.next())
+                    {
+                     check = "true";   
+                    }
+                    ao.put("hour"+i,check);
+               }
+                a.put(ao);
+
+            }
+        } catch (SQLException | JSONException ex) {
+            Logger.getLogger(NewWebService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        System.out.print(a.toString());
+        return a.toString();
+    }
+
+    /**
+     * Web service operation
+     */
+    
+    
+    @WebMethod(operationName = "getcource")
+    public String getcource(@WebParam(name = "id") String id) {
+        //TODO write your implementation code here:
+        
+        String sel = "select * from tbl_course where department_id='"+id+"' ";
+        ResultSet rs = con.selectCommand(sel);
+        System.out.println(sel);
+        JSONArray j = new JSONArray();
+        try {
+            while (rs.next()) {
+                JSONObject jo = new JSONObject();
+                {
+                    try {
+                        jo.put("cid", rs.getString("course_id"));
+                        jo.put("cname", rs.getString("course_name"));
+                        j.put(jo);
+                    } catch (JSONException ex) {
+                        Logger.getLogger(NewWebService.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(NewWebService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        System.out.println(j.toString());
+        return j.toString();
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "semester")
+    public String semester() {
+        //TODO write your implementation code here:
+         String sel = "select * from tbl_semester  ";
+        ResultSet rs = con.selectCommand(sel);
+        System.out.println(sel);
+        JSONArray j = new JSONArray();
+        try {
+            while (rs.next()) {
+                JSONObject jo = new JSONObject();
+                {
+                    try {
+                        jo.put("sid", rs.getString("semester_id"));
+                        jo.put("sname", rs.getString("semester_name"));
+                        j.put(jo);
+                    } catch (JSONException ex) {
+                        Logger.getLogger(NewWebService.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(NewWebService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        System.out.println(j.toString());
+        return j.toString();
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "AddAttendance")
+    public String AddAttendance(@WebParam(name = "sid") String sid, @WebParam(name = "fid") String fid, @WebParam(name = "hour") String hour)  {
+        //TODO write your implementation code here:
+        String dilt = "Attendance Added";
+        String sel = " select * from tbl_attendance where student_id='"+sid+"'  and attendance_hour='"+hour+"' ";
+        ResultSet st = con.selectCommand(sel);
+        try {
+            if(st.next()){
+                String delqry = " delete from tbl_attendance where student_id='"+sid+"' and attendance_hour='"+hour+"'  ";
+                con.executeCommand(delqry);
+                dilt = "Deleted";
+            }else{
+                String attendanceinsqry = " insert into tbl_attendance (student_id,faculty_id,attendance_hour,attendance_date) VALUES ('"+sid+"','"+fid+"','"+hour+"',curdate()) ";
+                con.executeCommand(attendanceinsqry);
+                System.out.println(attendanceinsqry);
+                
+                
+            }   } catch (SQLException ex) {
+            Logger.getLogger(NewWebService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return dilt;
+    
+    
 }
+}
+
