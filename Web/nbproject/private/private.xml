@@ -3,13 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/LiveAttendence/Web/web/Admin/ViewProfile.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Faculty/EditProfile.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Admin/Homepage.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Admin/TimeTable.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Faculty/MyProfile.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Admin/ViewAddedFaculty.jsp</file>
-            <file>file:/D:/LiveAttendence/Web/web/Faculty/ViewTimeTable.jsp</file>
+            <file>file:/D:/LiveAttendence/Web/web/index.jsp</file>
+            <file>file:/D:/LiveAttendence/Web/src/java/DB/NewWebService.java</file>
+            <file>file:/D:/LiveAttendence/Web/web/Faculty/InternalMark.jsp</file>
         </group>
     </open-files>
 </project-private>

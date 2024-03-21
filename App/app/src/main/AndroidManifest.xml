@@ -16,6 +16,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".AddinternalMark"
+            android:exported="false" />
+        <activity
+            android:name=".View_InternalMark"
+            android:exported="false" />
+        <activity
             android:name=".Attendance_spinner"
             android:exported="false" />
         <activity

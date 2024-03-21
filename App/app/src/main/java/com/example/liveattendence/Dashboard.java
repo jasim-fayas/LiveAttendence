@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class Dashboard extends AppCompatActivity {
    CardView cardmypro;
    CardView cardlogout,cardtimetable;
-    CardView cardcomplaint,cardattendence;
+    CardView cardcomplaint,cardattendence,cardinternalmark;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class Dashboard extends AppCompatActivity {
         cardcomplaint = findViewById(R.id.card5);
         cardattendence = findViewById(R.id.card4);
         cardtimetable = findViewById(R.id.card3);
+        cardinternalmark = findViewById(R.id.card2);
 
         cardmypro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +69,14 @@ public class Dashboard extends AppCompatActivity {
                     startActivity(timetable);
                 }
             });
+        cardinternalmark.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent internal = new Intent(Dashboard.this, View_InternalMark.class);
+                startActivity(internal);
+            }
+        });
+
     }
 
     private void clearSession() {

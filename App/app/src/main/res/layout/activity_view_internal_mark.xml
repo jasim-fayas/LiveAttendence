@@ -6,4 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".View_InternalMark">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Internal Mark"
+        android:textSize="32sp"
+        android:fontFamily="@font/marketfresh"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/lavender"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:id="@+id/internalRecyclerView">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

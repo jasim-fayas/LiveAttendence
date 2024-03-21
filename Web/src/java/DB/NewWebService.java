@@ -329,5 +329,67 @@ public class NewWebService {
     
     
 }
-}
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "subjectsandsemester")
+    public String subjectsandsemester(@WebParam(name = "fid") String fid) {
+        //TODO write your implementation code here:
+        String subs = " select * from tbl_assign p inner join tbl_subject q on p.subject_id=q.subject_id inner join tbl_semester r on p.semester_id=r.semester_id where faculty_id='"+fid+"' ";
+        System.out.println(subs);
+        ResultSet ss = con.selectCommand(subs);
+        
+       JSONArray a = new JSONArray();
+        
+         try {
+            while (ss.next()) {
+                JSONObject ao = new JSONObject();
+                ao.put("sname", ss.getString("subject_name")); 
+                 ao.put("sid", ss.getString("subject_id")); 
+                ao.put("semname", ss.getString("semester_name"));
+                 ao.put("semid", ss.getString("semester_id"));
+//                fo.put("sname", fc.getString("subject_name"));
+//                fo.put("dname", fc.getString("department_type_name"));
+                a.put(ao);
+
+            }
+        } catch (SQLException | JSONException ex) {
+            Logger.getLogger(NewWebService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        System.out.print(a.toString());
+        return a.toString();
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "getstudwithsubjects")
+    public String getstudwithsubjects(@WebParam(name = "subId") String subId) {
+        //TODO write your implementation code here:
+         String selQry = "select * from tbl_student p inner join tbl_course r on p.course_id=r.course_id inner join tbl_subject q on r.course_id=q.course_id inner join tbl_semester pq on p.semester_id=pq.semester_id where q.subject_id='" + subId + "'";
+      System.out.println(selQry);
+        ResultSet ss = con.selectCommand(selQry);
+        
+       JSONArray a = new JSONArray();
+        
+         try {
+            while (ss.next()) {
+                JSONObject ao = new JSONObject();
+                ao.put("stuname", ss.getString("student_name")); 
+                 ao.put("stuid", ss.getString("student_id")); 
+              
+//                fo.put("sname", fc.getString("subject_name"));
+//                fo.put("dname", fc.getString("department_type_name"));
+                a.put(ao);
+
+            }
+        } catch (SQLException | JSONException ex) {
+            Logger.getLogger(NewWebService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        System.out.print(a.toString());
+        return a.toString();
+    }
+    }
+
 
