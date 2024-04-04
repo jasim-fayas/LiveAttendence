@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomFontTextStyle">
+        <item name="android:fontFamily">@font/myfont2</item>
+    </style>
+    <style name="CustomFontzappat">
+        <item name="android:fontFamily">@font/zappat</item>
+    </style>
+    <style name="CustomFontmarket">
+        <item name="android:fontFamily">@font/marketfresh</item>
+    </style>
+
+</resources>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp"
+    android:orientation="vertical"
+    android:background="@color/bluedark"
+
+    >
+
+    <ImageView
+        android:id="@+id/pngattendence"
+        android:layout_width="match_parent"
+        android:layout_height="218dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/solidong"
+        android:layout_marginTop="-20dp"
+        />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="No More Class Bunking"
+    android:textColor="@color/white"
+    android:fontFamily="@font/zappat"
+    android:layout_marginTop="15dp"
+    android:textSize="25dp"
+    android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp">
+        
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="380dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:id="@+id/name"
+            android:textColorHint="@color/white"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:id="@+id/email"
+            android:textColorHint="@color/white"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:hint="Phone"
+
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:id="@+id/phone"
+            android:textColorHint="@color/white"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="380dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:hint="Date of Birth"
+            android:id="@+id/dob"
+            android:textColorHint="@color/white"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:focusable="false"
+                android:onClick="Select a Date"
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:id="@+id/password"
+            android:textColorHint="@color/white"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            app:passwordToggleEnabled="true"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <Button
+        android:layout_width="380dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/white"
+        android:text="GO"
+        android:textColor="@color/black11"
+        android:textStyle="bold"
+        android:layout_height="wrap_content">
+
+    </Button>
+    <Button
+        android:layout_width="380dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#00000000"
+        android:text="Already have a account ? Login"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+
+        android:id="@+id/LOGIN_SCREEN"
+        android:layout_height="wrap_content">
+
+    </Button>
+</LinearLayout>

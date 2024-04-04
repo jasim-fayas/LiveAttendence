@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Live Attendence</string>
+    <string name="prompt_course">Select a course</string>
+    <string name="prompt_semester">Select a semester</string>
+</resources>

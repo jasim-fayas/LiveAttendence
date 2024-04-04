@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <!-- Student Name -->
+        <TextView
+            android:id="@+id/textViewdeptName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@color/lavender"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/marketfresh"
+            android:text="Department Name" />
+
+        <!-- Horizontal row for subject and semester -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+           android:gravity="center"
+
+           >
+
+            <!-- Subject EditText -->
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Subject"
+              android:layout_gravity="center"
+              android:fontFamily="@font/zappat"
+              android:gravity="center"
+              android:layout_marginBottom="10dp"
+              android:textSize="18dp"
+              android:id="@+id/FacultySubject"
+              >
+
+          </TextView>
+
+            <!-- Semester EditText -->
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Semester"
+               android:fontFamily="@font/zappat"
+
+               android:textSize="18dp"
+               android:id="@+id/facultysubjectsemester"
+               ></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

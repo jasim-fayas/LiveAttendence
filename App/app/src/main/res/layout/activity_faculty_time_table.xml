@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".faculty_time_table">
+
+    <WebView
+        android:id="@+id/timetablewebview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbarThumbVertical="@android:color/darker_gray"
+        android:scrollbarSize="8dp"
+        android:isScrollContainer="false"
+        android:saveEnabled="true"
+        android:overScrollMode="never"
+        android:keepScreenOn="true"
+        android:layout_weight="1"
+        android:fitsSystemWindows="true"
+        android:clipToPadding="false"
+        />
+
+
+</LinearLayout>
