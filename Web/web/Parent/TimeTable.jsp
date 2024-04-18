@@ -49,27 +49,16 @@
     <a href="" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
-          <li><a href="Homepage.jsp">Home</a></li>
-         <li><a href="../Logout.jsp">Logout</a></li>
+          <li><a href="HomePage.jsp">Home</a></li>
+      
+          <li><a href="../Logout.jsp">Logout</a></li>
       </ul>
     </nav>
 </header>
 <br><br><br><br><br><br><br><br>
 <div id="tab" align="center">
     
-   <%-- 
-    Document   : TimeTable
-    Created on : 30 Jan, 2024, 4:59:18 PM
-    Author     : jasim fayas
---%>
-
-<%@ page import="java.sql.*" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="java.io.PrintWriter" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="java.util.*" %>
-
-<%
+    <%
     ArrayList<String> days = new ArrayList<String>();
     days.add("Monday");
     days.add("Tuesday");
@@ -77,15 +66,15 @@
     days.add("Thursday");
     days.add("Friday");
 
-    String semester = "", course = "";
+    String semester = "",course="";
 
     if (request.getParameter("btn_reset") != null) {
-        response.sendRedirect("TimeTable.jsp");
+        response.sendRedirect("Timetable.jsp");
     }
 
 
 %>
-<div id="tab" align="center">
+    
     <h1 align="center">Time Table</h1>
     <form id="form1" name="form1" action="">
         <table border="1">
@@ -108,12 +97,11 @@
                 <td colspan="3">Semester
                     <select name="sel_semester">
                         <option value="">-----Select-----</option>
-                        <%                            String selQryz = "select * from tbl_semester";
-
-                            ResultSet result = con.selectCommand(selQryz);
+                        <%                            String selQry = "select * from tbl_semester ";
+                            ResultSet result = con.selectCommand(selQry);
                             while (result.next()) {
                         %>
-                        <option value="<%=result.getString("semester_id")%>"><%=result.getString("semester_name")%></option>
+                        <option value="<%= result.getString("semester_id")%>"><%= result.getString("semester_name")%></option>
                         <%
                             }
                         %>
@@ -131,7 +119,18 @@
                     semester = request.getParameter("sel_semester");
                     course = request.getParameter("sel_course");
                     if (semester != null && !semester.isEmpty()) {
-                        for (String day : days) {
+            %>
+            <tr>
+                <td>Day</td>
+                <td>9:30-10:30</td>
+                <td>10:30-11:30</td>
+                <td>11:45-12:45</td>
+                <td>12:45-1:45</td>
+                <td>1:45-2:30</td>
+                <td>2:30-3:30</td>
+            </tr>
+            <%
+                for (String day : days) {
             %>
             <tr>
                 <td height="38"><%= day%></td>
@@ -152,71 +151,38 @@
                     }
                 %>
                 <td>
-                    <select id="sel_subject" onchange="submitTimetable(<%=i%>, '<%= course%>', '<%= semester%>', this.value, '<%= day%>')">
-                        <option value="">Select</option>
-                        <%
-                            String selQry = "SELECT * FROM tbl_subject WHERE semester_id='" + semester + "' and course_id='" + course + "'";
+                    <%
+                        String selQry1 = "SELECT * FROM tbl_timetable t INNER JOIN tbl_subject s ON t.subject_id = s.subject_id WHERE timetable_day='" + day + "' AND timetable_hour='" + i + "' AND s.semester_id='" + semester + "' and course_id='"+course+"'";
+                        ResultSet data1 = con.selectCommand(selQry1);
 
-                            ResultSet result1 = con.selectCommand(selQry);
-
-                            while (result1.next()) {
-                                String subjectId = result1.getString("subject_id");
-                                String subjectName = result1.getString("subject_name");
-
-                                String selQry1 = "SELECT * FROM tbl_timetable WHERE timetable_day='" + day + "' AND timetable_hour='" + i + "' AND semester_id='" + semester + "' AND subject_id='" + subjectId + "'";
-
-                                ResultSet data1 = con.selectCommand(selQry1);
-
-                                if (data1.next()) {
-                        %>
-                        <option selected value="<%= subjectId%>"><%= subjectName%></option>
-                        <%
+                        if (data1.next()) {
+                            out.print(data1.getString("subject_name"));
                         } else {
-                        %>
-                        <option value="<%= subjectId%>"><%= subjectName%></option>
-                        <%
-                                }
-                            }
-                        %>
-                    </select>
+                            out.print("Not Decide");
+                        }
+
+                    %>
                 </td>
-                <%
-                    }
+                <%                                        }
                 %>
             </tr>
             <%
                 }
             %>
+            <%
+            } else {
+            %>
+            <script>
+                alert("Select Semester");
+                window.location = "Timetable.jsp";
+            </script>
+            <%
+                    }
+                }
+            %>
         </table>
     </form>
 </div>
-<%
-} else {
-%>
-<script>
-    alert("Select Semester");
-    window.location = "TimeTable.jsp";
-</script>
-<%
-        }
-    }
-
-
-%>
-
-<script src="../Assets/JQ/jQuery.js"></script>
-<script>
-    function submitTimetable(hour,cid, semester, subject, day) {
-        $.ajax({
-            url: "../Assets/AjaxPages/AjaxTimeTable.jsp?hour=" + hour + "&semester=" + semester + "&subject=" + subject + "&day=" + day,
-            success: function(html) {
-                window.location = 'TimeTable.jsp?sel_course='+cid+'&sel_semester=' + semester + '&btn_submit=Submit';
-            }
-        });
-    }
-</script>
-
-
         
         
         <br><br><br><br> <br><br><br><br>

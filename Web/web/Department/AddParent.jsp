@@ -101,7 +101,7 @@
                         Parent Name
                     </td>
                     <td>
-                        <input type="text" name="txt_name">
+                        <input required type="text" name="txt_name" title="Name Allows Only Alphabets,Spaces and First Letter Must Be Capital Letter" pattern="^[A-Z]+[a-zA-Z ]*$"/>
                     </td>
                 </tr>
                 <tr>
@@ -109,7 +109,8 @@
                         Parent Contact
                     </td>
                     <td>
-                        <input type="text" name="txt_contact">
+                        <input  type="text" required name="txt_contact" pattern="[7-9]{1}[0-9]{9}" 
+                title="Phone number with 7-9 and remaing 9 digit with 0-9"/>
                     </td>
                 </tr>
                 <tr>
@@ -117,7 +118,7 @@
                         Parent Email
                     </td>
                     <td>
-                        <input type="email" name="txt_email">
+                        <input required type="email" name="txt_email">
                     </td>
                 </tr>
                   <tr>
@@ -125,7 +126,7 @@
                         Parent Address
                     </td>
                     <td>
-                        <textarea name="txt_address"></textarea>
+                        <textarea required name="txt_address"></textarea>
                     </td>
                 </tr>
                 <tr>
@@ -133,7 +134,7 @@
                         Parent Password
                     </td>
                     <td>
-                        <input type="password" name="txt_password">
+                        <input type="text" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required name="txt_password" />
                     </td>
                 </tr>
                 <tr>

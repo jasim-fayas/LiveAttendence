@@ -9,7 +9,7 @@ import org.ksoap2.transport.HttpTransportSE;
 
 final public class WebServiceCaller {
 
-    public static final String ip="192.168.1.90";
+    public static final String ip="172.20.10.2";
 
     private String response;
     private int responseCode;

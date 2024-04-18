@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <title>Grad School HTML5 Template</title>
+    <title>Parent home</title>
     
     <!-- Bootstrap core CSS -->
     <link href="../Assets/Template/main/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -42,7 +42,7 @@ https://templatemo.com/tm-557-grad-school
     <nav id="menu" class="main-nav" role="navigation">
         <ul class="main-menu">
             <li><a href="../index.jsp">Homepage</a></li>
-            <li class="has-submenu"><a href="#section2">My Profile</a>
+            <li class="has-submenu">
                 <ul class="sub-menu">
                     <li><a href="MyProfile.jsp">My Profile</a></li>
                     <li><a href="EditProfile.jsp">Edit Profile</a></li>
@@ -51,11 +51,12 @@ https://templatemo.com/tm-557-grad-school
             </li>
             <li><a href="feedback.jsp">FeedBack</a></li>
             <!-- New dropdown list -->
-            <li class="has-submenu"><a href="#section7">Student Details</a>
+            <li class="has-submenu"><a href="TimeTable.jsp">Student Details</a>
                 <ul class="sub-menu">
-                    <li><a href="Complaint.jsp">Complaint</a></li>
-                    <li><a href="AnonymousComplaint.jsp">Anonymous Complaint</a></li>
+                   
                     <li><a href="ViewLeaveApplication.jsp">Leave Request</a></li>
+                    <li><a href="TimeTable.jsp">Time Table</a></li>
+                    <li><a href="ViewAttendance.jsp">View Attendance</a></li>
                 </ul>
             </li>
             <!-- End of new dropdown list -->
@@ -105,10 +106,10 @@ https://templatemo.com/tm-557-grad-school
           <div class="features-post">
             <div class="features-content">
               <div class="content-show">
-                <h4><i class="fa fa-pencil"></i>All Courses</h4>
+                  <h4><i class="fa fa-pencil"></i>Variety Courses</h4>
               </div>
               <div class="content-hide">
-                <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
+                <p>We offer a wide variety of courses such a arts courses,science courses,dental science,law studies etc</p>
                 <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
                 <div class="scroll-to-section"><a href="#section2">More Info.</a></div>
             </div>
@@ -119,10 +120,10 @@ https://templatemo.com/tm-557-grad-school
           <div class="features-post second-features">
             <div class="features-content">
               <div class="content-show">
-                <h4><i class="fa fa-graduation-cap"></i>Virtual Class</h4>
+                <h4><i class="fa fa-graduation-cap"></i>Top Rated Faculties</h4>
               </div>
               <div class="content-hide">
-                <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
+                <p>We have top rated faculties in our store. Graduated from top universities</p>
                 <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
                 <div class="scroll-to-section"><a href="#section3">Details</a></div>
             </div>
@@ -133,10 +134,10 @@ https://templatemo.com/tm-557-grad-school
           <div class="features-post third-features">
             <div class="features-content">
               <div class="content-show">
-                <h4><i class="fa fa-book"></i>Real Meeting</h4>
+                <h4><i class="fa fa-book"></i>NAAC Approved</h4>
               </div>
               <div class="content-hide">
-                <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
+                <p>NAAC stands for National Assessment Accreditation Council. It is a body that grades colleges , institutions and universities based on their performance in certain set parameters.It gives an idea about the university and it's quality status </p>
                 <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
                 <div class="scroll-to-section"><a href="#section4">Read More</a></div>
             </div>
@@ -147,20 +148,20 @@ https://templatemo.com/tm-557-grad-school
     </div>
   </section>
 
-  <section class="section why-us" data-section="section2">
+ <section class="section why-us" data-section="section2">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="section-heading">
-            <h2>Why choose Live Attendance?</h2>
+           <h2>Why choose Live Attendance?</h2>
           </div>
         </div>
         <div class="col-md-12">
           <div id='tabs'>
             <ul>
-              <li><a href='#tabs-1'>Best Education</a></li>
+                <li><a href='#tabs-1'>Best Education</a></li>
               <li><a href='#tabs-2'>Top Management</a></li>
-              <li><a href='#tabs-3'>Quality Meeting</a></li>
+              <li><a href='#tabs-3'>Quality Interactions</a></li>
             </ul>
             <section class='tabs-content'>
               <article id='tabs-1'>
@@ -170,7 +171,7 @@ https://templatemo.com/tm-557-grad-school
                   </div>
                   <div class="col-md-6">
                     <h4>Best Education</h4>
-                    <p>Grad School is free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial purposes. You may want to make <a href="https://paypal.me/templatemo" target="_parent" rel="sponsored">a little donation</a> to TemplateMo. Please tell your friends about us. Thank you.</p>
+                    <p>"Access to high-quality, inclusive education is essential for empowering individuals and fostering equitable opportunities for personal and societal advancement." <a href="https://paypal.me/templatemo" target="_parent" rel="sponsored"></a> </p>
                   </div>
                 </div>
               </article>
@@ -180,9 +181,8 @@ https://templatemo.com/tm-557-grad-school
                     <img src="../Assets/Template/main/assets/images/choose-us-image-02.png" alt="">
                   </div>
                   <div class="col-md-6">
-                    <h4>Top Level</h4>
-                    <p>You can modify this HTML layout by editing contents and adding more pages as you needed. Since this template has options to add dropdown menus, you can put many HTML pages.</p> 
-                    <p>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis non ante.</p>
+                    <h4>Top Level Management</h4>
+                    <p>"Effective education management requires strategic vision, innovative leadership, and a commitment to continuous improvement to ensure optimal learning outcomes for all stakeholders."</p> 
                   </div>
                 </div>
               </article>
@@ -192,8 +192,8 @@ https://templatemo.com/tm-557-grad-school
                     <img src="../Assets/Template/main/assets/images/choose-us-image-03.png" alt="">
                   </div>
                   <div class="col-md-6">
-                    <h4>Quality Meeting</h4>
-                    <p>You are NOT allowed to redistribute this template ZIP file on any template collection website. However, you can use this template to convert into a specific theme for any kind of CMS platform such as WordPress. For more information, you shall <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact TemplateMo</a> now.</p>
+                    <h4>Quality Intraction</h4>
+                    <p>"Quality educational interaction cultivates a dynamic exchange of ideas, fosters critical thinking skills, and nurtures a supportive learning environment where students are engaged and empowered to reach their full potential." <a rel="nofollow" href="https://templatemo.com/contact" target="_parent"></a> now.</p>
                   </div>
                 </div>
               </article>
@@ -210,7 +210,7 @@ https://templatemo.com/tm-557-grad-school
         <div class="col-md-7 col-xs-12">
           <div class="continer centerIt">
             <div>
-              <h4>Take <em>any online course</em> and win $326 for your next class</h4>
+              <h4>Take <em>any online course for your children</em> and win a scholarship</h4>
               <div class="counter">
 
                 <div class="days">
@@ -274,160 +274,38 @@ https://templatemo.com/tm-557-grad-school
 
   <section class="section courses" data-section="section4">
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="section-heading">
-            <h2>Choose Your Course</h2>
-          </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>Here is the List Of Add On Courses We Provide</h2>
+                </div>
+            </div>
         </div>
         <div class="owl-carousel owl-theme">
-          <div class="item">
-            <img src="../Assets/Template/main/assets/images/courses-01.jpg" alt="Course #1">
-            <div class="down-content">
-              <h4>Digital Marketing</h4>
-              <p>You can get free images and videos for your websites by visiting Unsplash, Pixabay, and Pexels.</p>
-              <div class="author-image">
-                <img src="../Assets/Template/main/assets/images/author-01.png" alt="Author 1">
-              </div>
-              <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-              </div>
+            <%
+                
+                String sel4 = "select * from tbl_add_on p inner join tbl_course q on p.course_id=q.course_id";
+                ResultSet rt = con.selectCommand(sel4);
+                int i = 0;
+                while(rt.next()) {
+                    i++;
+            %>
+            <div class="item">
+                <img src="../Assets/Files/AddON/<%= rt.getString("add_on_photo") %>" alt="Course #<%=i%>">
+                <div class="down-content">
+                    <h4><%= rt.getString("add_on_name") %></h4>
+                    <p>You can get free images and videos for your websites by visiting Unsplash, Pixabay, and Pexels.</p>
+                    <div class="text-button-pay">
+<!--                        <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>-->
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="item">
-            <img src="../Assets/Template/main/assets/images/courses-02.jpg" alt="Course #2">
-            <div class="down-content">
-              <h4>Business World</h4>
-              <p>Quisque cursus augue ut velit dictum, quis volutpat enim blandit. Maecenas a lectus ac ipsum porta.</p>
-              <div class="author-image">
-                <img src="../Assets/Template/main/assets/images/author-02.png" alt="Author 2">
-              </div>
-              <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="../Assets/Template/main/assets/images/courses-03.jpg" alt="Course #3">
-            <div class="down-content">
-              <h4>Media Technology</h4>
-              <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.</p>
-              <div class="author-image">
-                <img src="../Assets/Template/main/assets/images/author-03.png" alt="Author 3">
-              </div>
-              <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="../Assets/Template/main/assets/images/courses-04.jpg" alt="Course #4">
-            <div class="down-content">
-              <h4>Communications</h4>
-              <p>Download free images and videos for your websites by visiting Unsplash, Pixabay, and Pexels.</p>
-              <div class="author-image">
-                <img src="../Assets/Template/main/assets/images/author-04.png" alt="Author 4">
-              </div>
-              <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="../Assets/Template/main/assets/images/courses-05.jpg" alt="">
-            <div class="down-content">
-              <h4>Business Ethics</h4>
-              <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.</p>
-              <div class="author-image">
-                <img src="../Assets/Template/main/assets/images/author-05.png" alt="">
-              </div>
-              <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="../Assets/Template/main/assets/images/courses-01.jpg" alt="">
-            <div class="down-content">
-              <h4>Photography</h4>
-              <p>Quisque cursus augue ut velit dictum, quis volutpat enim blandit. Maecenas a lectus ac ipsum porta.</p>
-              <div class="author-image">
-                <img src="../Assets/Template/main/assets/images/author-01.png" alt="">
-              </div>
-              <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="../Assets/Template/main/assets/images/courses-02.jpg" alt="">
-            <div class="down-content">
-              <h4>Web Development</h4>
-              <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.</p>
-              <div class="author-image">
-                <img src="../Assets/Template/main/assets/images/author-02.png" alt="">
-              </div>
-              <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="../Assets/Template/main/assets/images/courses-03.jpg" alt="">
-            <div class="down-content">
-              <h4>Learn HTML CSS</h4>
-              <p>You can get free images and videos for your websites by visiting Unsplash, Pixabay, and Pexels.</p>
-              <div class="author-image">
-                <img src="../Assets/Template/main/assets/images/author-03.png" alt="">
-              </div>
-              <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="../Assets/Template/main/assets/images/courses-04.jpg" alt="">
-            <div class="down-content">
-              <h4>Social Media</h4>
-              <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.</p>
-              <div class="author-image">
-                <img src="../Assets/Template/main/assets/images/author-04.png" alt="">
-              </div>
-              <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="../Assets/Template/main/assets/images/courses-05.jpg" alt="">
-            <div class="down-content">
-              <h4>Digital Arts</h4>
-              <p>Quisque cursus augue ut velit dictum, quis volutpat enim blandit. Maecenas a lectus ac ipsum porta.</p>
-              <div class="author-image">
-                <img src="../Assets/Template/main/assets/images/author-05.png" alt="">
-              </div>
-              <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="../Assets/Template/main/assets/images/courses-01.jpg" alt="">
-            <div class="down-content">
-              <h4>Media Streaming</h4>
-              <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.</p>
-              <div class="author-image">
-                <img src="../Assets/Template/main/assets/images/author-01.png" alt="">
-              </div>
-              <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
+            <%
+                }
+            %>
         </div>
-      </div>
     </div>
-  </section>
+</section>
   
 
   <section class="section video" data-section="section5">
@@ -435,20 +313,19 @@ https://templatemo.com/tm-557-grad-school
       <div class="row">
         <div class="col-md-6 align-self-center">
           <div class="left-content">
-            <span>our presentation is for you</span>
-            <h4>Watch the video to learn more <em>about Live Attendance</em></h4>
-            <p>You are NOT allowed to redistribute this template ZIP file on any template collection website. However, you can use this template to convert into a specific theme for any kind of CMS platform such as WordPress. You may <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact TemplateMo</a> for details.
-            <br><br>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis non ante.</p>
-            <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">External URL</a></div>
+              <span>our presentation is for you</span>
+            <h4>Watch the video to learn more <em>about IGC</em></h4>
+            <p>Indira Gandhi College of Arts and Science is a first grade Post Graduate institution of higher education established in the year 2002 at Nellikuzhy about 5 KM from Kothamangalam The Educational Hub of Kerala. The College is approved by the Govt. of Kerala and affiliated with Mahatma Gandhi University, Kottayam. It is founded & managed by the Indira Gandhi Memorial Trust. The Trust also owns and manages Indira Gandhi Institute of Dental Sciences, Indira Gandhi Institute of Engineering & Technology, Indira Gandhi Polytechnic College, Indira Gandhi College of Paramedical Science, KMP Group of Institutions & SSM LP School Kudumunda. <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact jaasimee</a> for details.
+            <br><br>Kothamangalam/kerala/india</p>
           </div>
         </div>
         <div class="col-md-6">
           <article class="video-item">
             <div class="video-caption">
-              <h4>Power HTML Template</h4>
+             <h4>Indira Gandhi Group Of Instituions</h4>
             </div>
             <figure>
-              <a href="https://www.youtube.com/watch?v=r9LtOG6pNUw" class="play"><img src="../Assets/Template/main/assets/images/main-thumb.png"></a>
+                <a href="https://youtu.be/BWEnX9ECoEI?si=wvqeezzOQWTID8Z7" class="play"><img src="../Assets/Template/main/assets/images/ig.jpg"></a>
             </figure>
           </article>
         </div>
@@ -497,7 +374,7 @@ https://templatemo.com/tm-557-grad-school
         </div>
         <div class="col-md-6">
           <div id="map">
-            <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="422px" frameborder="0" style="border:0" allowfullscreen></iframe>
+           <iframe src="https://maps.google.com/maps?q=10.0745,76.5911&output=embed" width="100%" height="422px" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -510,8 +387,8 @@ https://templatemo.com/tm-557-grad-school
         <div class="col-md-12">
           <p><i class="fa fa-copyright"></i> Copyright 2020 by Live Attendance 
           
-           | Design: <a href="https://templatemo.com" rel="sponsored" target="_parent">TemplateMo</a><br>
-           Distributed By: <a href="https://themewagon.com" rel="sponsored" target="_blank">ThemeWagon</a>
+           | Design: <a href="https://templatemo.com" rel="sponsored" target="_parent">Jaasimee</a><br>
+           Distributed By: <a href="https://themewagon.com" rel="sponsored" target="_blank">Jaasimee</a>
           
           </p>
         </div>

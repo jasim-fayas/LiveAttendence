@@ -54,7 +54,7 @@
       <ul class="main-menu">
           <li><a href="Homepage.jsp">Home</a></li>
       
-        <li><a href="Login.php">Logout</a></li>
+          <li><a href="../Logout.jsp">Logout</a></li>
       </ul>
     </nav>
 </header>

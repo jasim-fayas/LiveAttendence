@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <title>Grad School HTML5 Template</title>
+    <title>IndexPage</title>
     
     <!-- Bootstrap core CSS -->
     <link href="Assets/Template/main/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -42,7 +42,7 @@ https://templatemo.com/tm-557-grad-school
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
           <li><a href="Guest/Login.jsp">Login</a></li>
-        <li class="has-submenu"><a href="#section2">About Us</a>
+<!--        <li class="has-submenu"><a href="#section2">About Us</a>
           <ul class="sub-menu">
             <li><a href="#section2">Who we are?</a></li>
             <li><a href="#section3">What we do?</a></li>
@@ -51,9 +51,9 @@ https://templatemo.com/tm-557-grad-school
           </ul>
         </li>
         <li><a href="#section4">Courses</a></li>
-        <!-- <li><a href="#section5">Video</a></li> -->
+         <li><a href="#section5">Video</a></li> 
         <li><a href="#section6">Contact</a></li>
-        <li><a href="https://templatemo.com" class="external">External</a></li>
+        <li><a href="https://templatemo.com" class="external">External</a></li>-->
       </ul>
     </nav>
   </header>
@@ -69,7 +69,7 @@ https://templatemo.com/tm-557-grad-school
               <h6>Indira Gandhi Group Of Institution</h6>
                              <h2><em>No More</em> Class Bunking</h2>
               <div class="main-button">
-                  <div class="scroll-to-section"><a href="#section2">Discover more</a></div>
+                  <div class="scroll-to-section"><a href="#section2"> IGC </a></div>
               </div>
           </div>
       </div>
@@ -84,10 +84,10 @@ https://templatemo.com/tm-557-grad-school
           <div class="features-post">
             <div class="features-content">
               <div class="content-show">
-                <h4><i class="fa fa-pencil"></i>All Courses</h4>
+                <h4><i class="fa fa-pencil"></i>Variety Courses</h4>
               </div>
               <div class="content-hide">
-                <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
+                <p>We offer a wide variety of courses such a arts courses,science courses,dental science,law studies etc</p>
                 <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
                 <div class="scroll-to-section"><a href="#section2">More Info.</a></div>
             </div>
@@ -101,7 +101,7 @@ https://templatemo.com/tm-557-grad-school
                 <h4><i class="fa fa-graduation-cap"></i>Top Rated Faculties</h4>
               </div>
               <div class="content-hide">
-                <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
+                <p>We have top rated faculties in our store. Graduated from top universities</p>
                 <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
                 <div class="scroll-to-section"><a href="#section3">Details</a></div>
             </div>
@@ -115,7 +115,7 @@ https://templatemo.com/tm-557-grad-school
                 <h4><i class="fa fa-book"></i>NAAC Approved</h4>
               </div>
               <div class="content-hide">
-                <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
+                <p>NAAC stands for National Assessment Accreditation Council. It is a body that grades colleges , institutions and universities based on their performance in certain set parameters.It gives an idea about the university and it's quality status </p>
                 <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
                 <div class="scroll-to-section"><a href="#section4">Read More</a></div>
             </div>
@@ -139,7 +139,7 @@ https://templatemo.com/tm-557-grad-school
             <ul>
               <li><a href='#tabs-1'>Best Education</a></li>
               <li><a href='#tabs-2'>Top Management</a></li>
-              <li><a href='#tabs-3'>Quality Meeting</a></li>
+              <li><a href='#tabs-3'>Quality Interactions</a></li>
             </ul>
             <section class='tabs-content'>
               <article id='tabs-1'>
@@ -149,7 +149,7 @@ https://templatemo.com/tm-557-grad-school
                   </div>
                   <div class="col-md-6">
                     <h4>Best Education</h4>
-                    <p>Grad School is free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial purposes. You may want to make <a href="https://paypal.me/templatemo" target="_parent" rel="sponsored">a little donation</a> to TemplateMo. Please tell your friends about us. Thank you.</p>
+                    <p>"Access to high-quality, inclusive education is essential for empowering individuals and fostering equitable opportunities for personal and societal advancement." <a href="https://paypal.me/templatemo" target="_parent" rel="sponsored"></a> </p>
                   </div>
                 </div>
               </article>
@@ -160,8 +160,8 @@ https://templatemo.com/tm-557-grad-school
                   </div>
                   <div class="col-md-6">
                     <h4>Top Level</h4>
-                    <p>You can modify this HTML layout by editing contents and adding more pages as you needed. Since this template has options to add dropdown menus, you can put many HTML pages.</p> 
-                    <p>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis non ante.</p>
+                    <p>"Effective education management requires strategic vision, innovative leadership, and a commitment to continuous improvement to ensure optimal learning outcomes for all stakeholders."</p> 
+                    <p></p>
                   </div>
                 </div>
               </article>
@@ -171,8 +171,8 @@ https://templatemo.com/tm-557-grad-school
                     <img src="Assets/Template/main/assets/images/choose-us-image-03.png" alt="">
                   </div>
                   <div class="col-md-6">
-                    <h4>Quality Meeting</h4>
-                    <p>You are NOT allowed to redistribute this template ZIP file on any template collection website. However, you can use this template to convert into a specific theme for any kind of CMS platform such as WordPress. For more information, you shall <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact TemplateMo</a> now.</p>
+                    <h4>Quality Intraction</h4>
+                    <p>"Quality educational interaction cultivates a dynamic exchange of ideas, fosters critical thinking skills, and nurtures a supportive learning environment where students are engaged and empowered to reach their full potential." <a rel="nofollow" href="https://templatemo.com/contact" target="_parent"></a> now.</p>
                   </div>
                 </div>
               </article>
@@ -292,19 +292,19 @@ https://templatemo.com/tm-557-grad-school
         <div class="col-md-6 align-self-center">
           <div class="left-content">
             <span>our presentation is for you</span>
-            <h4>Watch the video to learn more <em>about Live Attendance</em></h4>
-            <p>You are NOT allowed to redistribute this template ZIP file on any template collection website. However, you can use this template to convert into a specific theme for any kind of CMS platform such as WordPress. You may <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact TemplateMo</a> for details.
-            <br><br>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis non ante.</p>
+            <h4>Watch the video to learn more <em>about IGC</em></h4>
+            <p>Indira Gandhi College of Arts and Science is a first grade Post Graduate institution of higher education established in the year 2002 at Nellikuzhy about 5 KM from Kothamangalam The Educational Hub of Kerala. The College is approved by the Govt. of Kerala and affiliated with Mahatma Gandhi University, Kottayam. It is founded & managed by the Indira Gandhi Memorial Trust. The Trust also owns and manages Indira Gandhi Institute of Dental Sciences, Indira Gandhi Institute of Engineering & Technology, Indira Gandhi Polytechnic College, Indira Gandhi College of Paramedical Science, KMP Group of Institutions & SSM LP School Kudumunda. <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact jaasimee</a> for details.
+            <br><br>Kothamangalam/kerala/india</p>
             <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">External URL</a></div>
           </div>
         </div>
         <div class="col-md-6">
           <article class="video-item">
             <div class="video-caption">
-              <h4>Power HTML Template</h4>
+              <h4>Indira Gandhi Group Of Instituions</h4>
             </div>
             <figure>
-              <a href="https://www.youtube.com/watch?v=r9LtOG6pNUw" class="play"><img src="Assets/Template/main/assets/images/main-thumb.png"></a>
+                <a href="https://youtu.be/BWEnX9ECoEI?si=wvqeezzOQWTID8Z7" class="play"><img src="Assets/Template/main/assets/images/ig.jpg"></a>
             </figure>
           </article>
         </div>

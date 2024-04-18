@@ -83,15 +83,34 @@
   
          <%
        if(request.getParameter("btn_submit")!= null){
+            
            
            String semester = request.getParameter("sel_semester");
             String name = rs.getString("faculty_id");     
              String subject = request.getParameter("sel_subject");    
              
-             String insert = " insert into tbl_assign(faculty_id,semester_id,subject_id) values ('"+name+"','"+semester+"','"+subject+"')";
-        //  out.print(insert);
-             con.executeCommand(insert);
-       } 
+             String insert = " insert into tbl_assign(faculty_id,semester_id,subject_id) values ('"+fid+"','"+semester+"','"+subject+"') ";
+//          out.print(insert);
+           if(con.executeCommand(insert))  {
+           %>
+      <script>
+    alert("Assign Completed");
+    window.location.href = 'ListAndAssign.jsp';
+</script>
+
+        <% } else {
+
+        %>
+   <script>
+          alert("Assign Failed");
+            window.location.href = 'ListAndAssign.jsp';
+
+        </script>
+
+        <%                  }
+            }
+
+        %>
   
   
   

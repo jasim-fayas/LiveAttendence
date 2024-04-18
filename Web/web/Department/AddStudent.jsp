@@ -1,16 +1,64 @@
 <%-- 
-    Document   : AddStudent
-    Created on : 25 Jan, 2024, 11:11:20 PM
+    Document   : ViewLeaveApplication
+    Created on : 7 Mar, 2024, 12:08:13 AM
     Author     : jasim fayas
 --%>
-<jsp:useBean class="DB.ConnectionClass" id="con"></jsp:useBean>
 <%@page import="java.sql.ResultSet"%>
+<jsp:useBean class="DB.ConnectionClass" id="con"></jsp:useBean>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Add Student</title>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Live Attendance</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="../Assets/Template/main/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../Assets/Template/main/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../Assets/Template/main/assets/css/templatemo-grad-school.css">
+    <link rel="stylesheet" href="../Assets/Template/main/assets/css/owl.css">
+    <link rel="stylesheet" href="../Assets/Template/main/assets/css/lightbox.css">
+    <link rel="stylesheet" href="../Assets/Template/form.css">
+     <style>
+        /* Add margin-bottom to the table */
+        table {
+            margin-bottom: 40px; /* Adjust this value as needed */
+        }
+        
+        /* Adjust padding for the footer */
+        footer {
+            padding-top: 10px; /* Adjust this value as needed */
+          
+        }
+    </style>
+    
+</head>
+<body>
+
+<!--header-->
+<header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="../index.jsp"><em>Live </em>Attendance</a>
+    </div>
+    <a href="" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+          <li><a href="Homepage.jsp">Home</a></li>
+      
+          <li><a href="../Logout.jsp">Logout</a></li>
+      </ul>
+    </nav>
+</header>
+<br><br><br><br><br><br><br><br>
+<div id="tab" align="center">
+        <title>JSP Page</title>
     </head>
     <body>
         <h1 align="center">Add Student</h1>
@@ -19,37 +67,38 @@
                 <tr>
                     <td>Name</td>
                     <td>
-                        <input type="text" name="name">
+                        <input required type="text" name="name" title="Name Allows Only Alphabets,Spaces and First Letter Must Be Capital Letter" pattern="^[A-Z]+[a-zA-Z ]*$"/>
                     </td>
                 </tr>
                 <tr>
                     <td>Contact</td>
                     <td>
-                        <input type="number" name="contact">
+                        <input type="text" required name="contact" pattern="[7-9]{1}[0-9]{9}" 
+                title="Phone number with 7-9 and remaing 9 digit with 0-9"/>
                     </td>
                 </tr>
                 <tr>
                     <td>Email</td>
                     <td>
-                        <input type="email" name="email">
+                        <input required type="email" name="email">
                     </td>
                 </tr>
                 <tr>
                     <td>Photo</td>
                     <td>
-                        <input type="file" name="photo">
+                        <input required type="file" name="photo">
                     </td>
                 </tr>
                 <tr>
                     <td>Address</td>
                     <td>
-                        <textarea name="address"></textarea>
+                        <textarea required name="address"></textarea>
                     </td>
                 </tr>
                 <tr>
                     <td>District</td>
                     <td>
-                        <select name="district" onchange="getPlace(this.value)">
+                        <select required name="district" onchange="getPlace(this.value)">
                             <option value="">---select---</option>
                             <%
                                 String selectdistrict = "select * from tbl_district";
@@ -67,7 +116,7 @@
                 <tr>
                     <td>Place</td>
                     <td>
-                        <select name="sel_place" id="sel_place">
+                        <select required name="sel_place" id="sel_place">
                             <option>---select---</option>
                         </select>
                       
@@ -76,20 +125,20 @@
                 <tr>
                     <td>Gender</td>
                     <td>
-                        <input type="radio" name="gender" value="male">Male
+                        <input required type="radio" name="gender" value="male">Male
                         <input type="radio" name="gender" value="female">Female
                     </td>
                 </tr>
                 <tr>
                     <td>Date of Birth</td>
                     <td>
-                        <input type="date" name="dob">
+                        <input required type="date" name="dob">
                     </td>
                 </tr>
                 <tr>
                     <td>Course</td>
                     <td>
-                        <select name="course">
+                        <select required name="course">
                             <option value="">---select---</option>
                             <%
                                 String cid = session.getAttribute("departmenttypeid").toString();
@@ -109,7 +158,7 @@
    <tr>
                     <td>Semester</td>
                     <td>
-                        <select name="semester">
+                        <select required name="semester">
                             <option value="">---select---</option>
                             <%
                                 String selectsemester = "select * from tbl_semester";
@@ -126,7 +175,7 @@
                 <tr>
                     <td>Password</td>
                     <td>
-                        <input type="password" name="password">
+                        <input ype="text" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required name="password" />
                     
 <input type="hidden" name="parent_id" value="<%=request.getParameter("id")%>">
                     </td>
@@ -157,5 +206,20 @@
     });
 }
     </script>
+    </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="../Assets/Template/main/vendor/jquery/jquery.min.js"></script>
+    <script src="../Assets/Template/main/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../Assets/Template/main/assets/js/isotope.min.js"></script>
+    <script src="../Assets/Template/main/assets/js/owl-carousel.js"></script>
+    <script src="../Assets/Template/main/assets/js/lightbox.js"></script>
+    <script src="../Assets/Template/main/assets/js/tabs.js"></script>
+    <script src="../Assets/Template/main/assets/js/video.js"></script>
+    <script src="../Assets/Template/main/assets/js/slick-slider.js"></script>
+    <script src="../Assets/Template/main/assets/js/custom.js"></script>
 </body>
 </html>
+

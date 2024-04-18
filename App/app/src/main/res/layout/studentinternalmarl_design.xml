@@ -32,25 +32,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-       android:layout_gravity="left"
+       android:layout_gravity="center"
 
             >
 
             <!-- Subject EditText -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Subject"
-                android:layout_gravity="left"
-                android:fontFamily="@font/zappat"
-              android:layout_marginLeft="50dp"
 
-                android:textSize="18dp"
-
-                android:id="@+id/studSubject"
-                >
-
-            </TextView>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,6 +45,7 @@
                 android:layout_marginLeft="50dp"
                 android:hint="Type the Mark Here"
                 android:text="0"
+                android:gravity="center"
                 android:inputType="number"
                 android:fontFamily="@font/marketfresh"
                 android:textSize="18dp"/>

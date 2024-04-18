@@ -52,7 +52,7 @@
       <ul class="main-menu">
           <li><a href="Homepage.jsp">Home</a></li>
       
-        <li><a href="Login.php">Logout</a></li>
+          <li><a href="../Logout.jsp">Logout</a></li>
       </ul>
     </nav>
 </header>
@@ -67,25 +67,26 @@
                 <tr>
                     <td>Name</td>
                     <td>
-                        <input type="text" name="name">
+                        <input required type="text" name="name" title="Name Allows Only Alphabets,Spaces and First Letter Must Be Capital Letter" pattern="^[A-Z]+[a-zA-Z ]*$"/>
                     </td>
                 </tr>
                 <tr>
                     <td>Contact</td>
                     <td>
-                        <input type="number" name="contact">
+                        <input  type="text" required name="contact" pattern="[7-9]{1}[0-9]{9}" 
+                title="Phone number with 7-9 and remaing 9 digit with 0-9"/>
                     </td>
                 </tr>
                 <tr>
                     <td>Email</td>
                     <td>
-                        <input type="email" name="email">
+                        <input type="email" name="email" required>
                     </td>
                 </tr>
                 <tr>
                     <td>Photo</td>
                     <td>
-                        <input type="file" name="photo">
+                        <input type="file" name="photo" required>
                     </td>
                 </tr>
                 <tr>
@@ -97,7 +98,7 @@
                 <tr>
                     <td>District</td>
                     <td>
-                        <select name="district" onchange="getPlace(this.value)">
+                        <select required name="district" onchange="getPlace(this.value)">
                             <option value="">---select---</option>
                             <%
                              String selectdistrict="select * from tbl_district";
@@ -123,26 +124,26 @@
                 <tr>
                     <td>Gender</td>
                     <td>
-                        <input type="radio" name="gender" value="male">Male
-                        <input type="radio" name="gender" value="female">Female
+                        <input required type="radio" name="gender" value="male">Male
+                        <input  type="radio" name="gender" value="female">Female
                     </td>
                 </tr>
                 <tr>
                     <td>Date of Birth</td>
                     <td>
-                        <input type="date" name="dob">
+                        <input required type="date" name="dob">
                     </td>
                 </tr>
                 <tr>
                     <td>About</td>
                     <td>
-                        <textarea name="about"></textarea>
+                        <textarea required name="about"></textarea>
                     </td>
                 </tr>
                 <tr>
                     <td>Department</td>
                     <td>
-                        <select name="department">
+                        <select required name="department">
                             <option value="">---select---</option>
                             <%
                              String selectdepartment="select * from tbl_department d inner join tbl_department_type dp on d.department_type_id=dp.department_type_id ";
@@ -160,7 +161,7 @@
                 <tr>
                     <td>Password</td>
                     <td>
-                        <input type="password" name="password">
+                        <input type="text" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required name="password" />
                     </td>
                 </tr>
                 <tr>

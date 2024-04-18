@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <title>Grad School HTML5 Template</title>
+    <title>Dept Home</title>
     
     <!-- Bootstrap core CSS -->
     <link href="../Assets/Template/main/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -326,10 +326,10 @@ https://templatemo.com/tm-557-grad-school
         <div class="col-md-6">
           <article class="video-item">
             <div class="video-caption">
-              <h4>Power HTML Template</h4>
+               <h4>Indira Gandhi Group Of Instituions</h4>
             </div>
             <figure>
-              <a href="https://www.youtube.com/watch?v=r9LtOG6pNUw" class="play"><img src="../Assets/Template/main/assets/images/main-thumb.png"></a>
+                <a href="https://youtu.be/BWEnX9ECoEI?si=wvqeezzOQWTID8Z7" class="play"><img src="../Assets/Template/main/assets/images/ig.jpg"></a>
             </figure>
           </article>
         </div>
@@ -378,7 +378,7 @@ https://templatemo.com/tm-557-grad-school
         </div>
         <div class="col-md-6">
           <div id="map">
-            <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="422px" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <iframe src="https://maps.google.com/maps?q=10.0745,76.5911&output=embed" width="100%" height="422px" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
         </div>
       </div>
